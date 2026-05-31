@@ -1,0 +1,144 @@
+# Quantumult X - HK Finance Apps DIRECT
+# 众安银行、天星银行、汇立银行、致富证券、盈透证券、嘉信理财、蚂蚁银行、FSM、BBAE、汇丰香港、投资全速易等
+# 用法：[filter_remote] 中设置 force-policy=DIRECT
+
+# --- ZA Bank / ZA International / ZA 系 ---
+HOST-SUFFIX,za.group,DIRECT
+HOST-SUFFIX,za.group.com,DIRECT
+HOST-SUFFIX,zabank.com.hk,DIRECT
+HOST-SUFFIX,zaintl.com,DIRECT
+HOST-SUFFIX,zaapi.com,DIRECT
+HOST-KEYWORD,zabank,DIRECT
+HOST-KEYWORD,za-bank,DIRECT
+HOST-KEYWORD,zaintl,DIRECT
+
+# --- Airstar Bank / 天星银行 ---
+HOST-SUFFIX,airstarbank.com,DIRECT
+HOST-SUFFIX,airstarbank.com.hk,DIRECT
+HOST-KEYWORD,airstar,DIRECT
+
+# --- WeLab Bank / 汇立银行 ---
+HOST-SUFFIX,welab.co,DIRECT
+HOST-SUFFIX,welab.bank,DIRECT
+HOST-SUFFIX,welab.com,DIRECT
+HOST-SUFFIX,welab.com.hk,DIRECT
+HOST-SUFFIX,welabgroup.com,DIRECT
+HOST-SUFFIX,welabgroup.com.hk,DIRECT
+HOST-SUFFIX,welab-bank.com,DIRECT
+HOST-SUFFIX,welab-bank.com.hk,DIRECT
+HOST-KEYWORD,welab,DIRECT
+
+# --- Chief Securities / 致富证券 ---
+HOST-SUFFIX,chiefgroup.com.hk,DIRECT
+HOST-SUFFIX,chiefsecurities.com.hk,DIRECT
+HOST-SUFFIX,chief.com.hk,DIRECT
+HOST-SUFFIX,chief-sec.com.hk,DIRECT
+HOST-KEYWORD,chiefgroup,DIRECT
+HOST-KEYWORD,chiefsecurities,DIRECT
+HOST-KEYWORD,chief-sec,DIRECT
+
+# --- Interactive Brokers / IBKR / 盈透证券 ---
+HOST-SUFFIX,interactivebrokers.com,DIRECT
+HOST-SUFFIX,interactivebrokers.com.hk,DIRECT
+HOST-SUFFIX,interactivebrokers.co.uk,DIRECT
+HOST-SUFFIX,ibkr.com,DIRECT
+HOST-SUFFIX,ibllc.com,DIRECT
+HOST-SUFFIX,ibkr.info,DIRECT
+HOST-SUFFIX,ibkrguides.com,DIRECT
+HOST-SUFFIX,ibkr.com.cn,DIRECT
+HOST-SUFFIX,ibkr.com.hk,DIRECT
+HOST-KEYWORD,interactivebrokers,DIRECT
+HOST-KEYWORD,ibkr,DIRECT
+HOST-KEYWORD,ibllc,DIRECT
+
+# --- Charles Schwab / 嘉信理财证券 ---
+HOST-SUFFIX,schwab.com,DIRECT
+HOST-SUFFIX,schwabcdn.com,DIRECT
+HOST-SUFFIX,schwabplan.com,DIRECT
+HOST-SUFFIX,schwabassetmanagement.com,DIRECT
+HOST-SUFFIX,tdameritrade.com,DIRECT
+HOST-SUFFIX,thinkorswim.com,DIRECT
+HOST-KEYWORD,schwab,DIRECT
+HOST-KEYWORD,tdameritrade,DIRECT
+HOST-KEYWORD,thinkorswim,DIRECT
+
+# --- Ant Bank HK / 蚂蚁银行 ---
+HOST-SUFFIX,antbank.hk,DIRECT
+HOST-SUFFIX,antbank.com.hk,DIRECT
+HOST-SUFFIX,antgroup.com,DIRECT
+HOST-SUFFIX,antfin.com,DIRECT
+HOST-SUFFIX,alipayhk.com,DIRECT
+HOST-SUFFIX,alipay.hk,DIRECT
+HOST-SUFFIX,mybank.cn,DIRECT
+HOST-KEYWORD,antbank,DIRECT
+HOST-KEYWORD,ant-bank,DIRECT
+HOST-KEYWORD,antgroup,DIRECT
+HOST-KEYWORD,alipayhk,DIRECT
+
+# --- FSMOne / Fundsupermart ---
+HOST-SUFFIX,fsmone.com,DIRECT
+HOST-SUFFIX,fsmone.com.hk,DIRECT
+HOST-SUFFIX,fundsupermart.com,DIRECT
+HOST-SUFFIX,fundsupermart.com.hk,DIRECT
+HOST-SUFFIX,ifastfinancial.com,DIRECT
+HOST-SUFFIX,ifastcorp.com,DIRECT
+HOST-KEYWORD,fsmone,DIRECT
+HOST-KEYWORD,fundsupermart,DIRECT
+HOST-KEYWORD,ifast,DIRECT
+
+# --- BBAE ---
+HOST-SUFFIX,bbae.com,DIRECT
+HOST-SUFFIX,bbae.com.hk,DIRECT
+HOST-SUFFIX,bbae.net,DIRECT
+HOST-KEYWORD,bbae,DIRECT
+
+# --- HSBC Hong Kong / 汇丰香港 ---
+HOST-SUFFIX,hsbc.com.hk,DIRECT
+HOST-SUFFIX,hsbc.com,DIRECT
+HOST-SUFFIX,hsbcnet.com,DIRECT
+HOST-SUFFIX,hsbcprivatebank.com,DIRECT
+HOST-SUFFIX,hsbcamanah.com,DIRECT
+HOST-SUFFIX,hsbc.com.cn,DIRECT
+HOST-SUFFIX,hsbc.com.sg,DIRECT
+HOST-SUFFIX,hsbchk.com,DIRECT
+HOST-KEYWORD,hsbc,DIRECT
+HOST-KEYWORD,hangseng,DIRECT
+HOST-SUFFIX,hangseng.com,DIRECT
+HOST-SUFFIX,hangseng.com.hk,DIRECT
+
+# --- 投资全速易 / i-Invest / AAStocks 相关金融行情与交易服务 ---
+HOST-SUFFIX,i-invest.com.hk,DIRECT
+HOST-SUFFIX,i-innvest.com,DIRECT
+HOST-SUFFIX,aastocks.com,DIRECT
+HOST-SUFFIX,aastocks.com.hk,DIRECT
+HOST-SUFFIX,etnet.com.hk,DIRECT
+HOST-SUFFIX,etnet.com,DIRECT
+HOST-SUFFIX,hkex.com.hk,DIRECT
+HOST-SUFFIX,hkexnews.hk,DIRECT
+HOST-SUFFIX,hkma.gov.hk,DIRECT
+HOST-SUFFIX,sfc.hk,DIRECT
+HOST-KEYWORD,i-invest,DIRECT
+HOST-KEYWORD,invest,DIRECT
+HOST-KEYWORD,aastocks,DIRECT
+HOST-KEYWORD,etnet,DIRECT
+HOST-KEYWORD,hkex,DIRECT
+
+# --- 通用金融登录 / 风控 / CDN 辅助域名（谨慎：仅香港金融常见服务）---
+HOST-SUFFIX,bochk.com,DIRECT
+HOST-SUFFIX,bochk.com.hk,DIRECT
+HOST-SUFFIX,hangseng.com.hk,DIRECT
+HOST-SUFFIX,jpmorgan.com,DIRECT
+HOST-SUFFIX,jpmorganchase.com,DIRECT
+HOST-SUFFIX,citibank.com.hk,DIRECT
+HOST-SUFFIX,citi.com.hk,DIRECT
+HOST-SUFFIX,sc.com.hk,DIRECT
+HOST-SUFFIX,standardchartered.com.hk,DIRECT
+HOST-SUFFIX,dbs.com.hk,DIRECT
+HOST-SUFFIX,dbs.com,DIRECT
+
+# --- 常见 ASN / IP 辅助：香港交易所、IBKR、Schwab 等公网段可能变化，优先域名规则 ---
+# 如遇 Quantumult X 版本不支持 IP-ASN，可删除以下行
+IP-ASN,14618,DIRECT,no-resolve
+IP-ASN,16509,DIRECT,no-resolve
+IP-ASN,15169,DIRECT,no-resolve
+IP-ASN,8075,DIRECT,no-resolve
