@@ -1,23 +1,220 @@
-# Quantumult X - HK Finance Apps DIRECT
-# 众安银行、天星银行、汇立银行、致富证券、盈透证券、嘉信理财、蚂蚁银行、FSM、BBAE、汇丰香港、投资全速易等
-# 用法：[filter_remote] 中设置 force-policy=DIRECT
+# Quantumult X - HK / US finance routing for Mainland China
+# Policy: affected HK/US brokerage apps -> PROXY; banks, payment, regulators,
+# public market data, and Chief/Chi Fu Securities -> DIRECT.
+# Replace PROXY with your own proxy policy/group name if needed.
+# Do not add force-policy in [filter_remote]; this file already mixes policies.
 
-# --- ZA Bank / ZA International / ZA 系 ---
+# ============================================================
+# PROXY - Mainland-restricted or cross-border brokerage apps
+# ============================================================
+
+# Futu / Futubull / moomoo
+HOST-SUFFIX,futu.com,PROXY
+HOST-SUFFIX,futu.cn,PROXY
+HOST-SUFFIX,futu.hk,PROXY
+HOST-SUFFIX,futu.link,PROXY
+HOST-SUFFIX,futuhk.com,PROXY
+HOST-SUFFIX,futuhk2.com,PROXY
+HOST-SUFFIX,futuhkapp.com,PROXY
+HOST-SUFFIX,futuhn.com,PROXY
+HOST-SUFFIX,futunn.com,PROXY
+HOST-SUFFIX,futunn.com.hk,PROXY
+HOST-SUFFIX,futufin.com,PROXY
+HOST-SUFFIX,futuholdings.com,PROXY
+HOST-SUFFIX,futuinc.com,PROXY
+HOST-SUFFIX,futuniuniu.com,PROXY
+HOST-SUFFIX,futubull.cn,PROXY
+HOST-SUFFIX,futuesop.com,PROXY
+HOST-SUFFIX,futuchain.com,PROXY
+HOST-SUFFIX,futuau.com,PROXY
+HOST-SUFFIX,futustatic.com,PROXY
+HOST-SUFFIX,fututrade.com,PROXY
+HOST-SUFFIX,fututrustee.com,PROXY
+HOST-SUFFIX,futu0.com,PROXY
+HOST-SUFFIX,futu1.com,PROXY
+HOST-SUFFIX,futu2.com,PROXY
+HOST-SUFFIX,futu3.com,PROXY
+HOST-SUFFIX,futu4.com,PROXY
+HOST-SUFFIX,futu5.com,PROXY
+HOST-SUFFIX,futu6.com,PROXY
+HOST-SUFFIX,futu7.com,PROXY
+HOST-SUFFIX,futu8.com,PROXY
+HOST-SUFFIX,futu9.com,PROXY
+HOST-SUFFIX,moomoo.com,PROXY
+HOST-SUFFIX,moomoo.com.hk,PROXY
+HOST-SUFFIX,moomooequity.com,PROXY
+HOST-SUFFIX,moomoobull.com,PROXY
+HOST-SUFFIX,moomootrustee.com,PROXY
+HOST,api.futunn.com,PROXY
+HOST,api5.futunn.com,PROXY
+HOST,download.futunn.com,PROXY
+HOST,openapi.futunn.com,PROXY
+HOST,qtcard.futunn.com,PROXY
+HOST,qtcardfthk.futufin.com,PROXY
+HOST,support.futunn.com,PROXY
+HOST,trade.futunn.com,PROXY
+HOST,shortconn.im.qcloud.com,PROXY
+HOST-KEYWORD,futunn,PROXY
+HOST-KEYWORD,futuhk,PROXY
+HOST-KEYWORD,futufin,PROXY
+HOST-KEYWORD,futuholdings,PROXY
+HOST-KEYWORD,moomoo,PROXY
+
+# Tiger Brokers / TradeUp
+HOST-SUFFIX,itiger.com,PROXY
+HOST-SUFFIX,itigerup.com,PROXY
+HOST-SUFFIX,tigerbrokers.com,PROXY
+HOST-SUFFIX,tigerbrokers.com.hk,PROXY
+HOST-SUFFIX,tigerbrokers.net,PROXY
+HOST-SUFFIX,tigerbrokers.nz,PROXY
+HOST-SUFFIX,tigerfintech.com,PROXY
+HOST-SUFFIX,tigerbbs.com,PROXY
+HOST-SUFFIX,tigerbbs.cn,PROXY
+HOST-SUFFIX,laohu8.com,PROXY
+HOST-SUFFIX,xiaohu8.com,PROXY
+HOST-SUFFIX,zhijianfengyi.com,PROXY
+HOST-SUFFIX,zhijianfengyi.cn,PROXY
+HOST-SUFFIX,tradeup.com,PROXY
+HOST-KEYWORD,itiger,PROXY
+HOST-KEYWORD,tigerbrokers,PROXY
+HOST-KEYWORD,tigerfintech,PROXY
+HOST-KEYWORD,laohu8,PROXY
+HOST-KEYWORD,xiaohu8,PROXY
+HOST-KEYWORD,zhijianfengyi,PROXY
+
+# Longbridge / Longport
+HOST-SUFFIX,longbridge.com,PROXY
+HOST-SUFFIX,longbridge.cn,PROXY
+HOST-SUFFIX,longbridge.hk,PROXY
+HOST-SUFFIX,longbridge.sg,PROXY
+HOST-SUFFIX,longbridge.global,PROXY
+HOST-SUFFIX,longbridge.cloud,PROXY
+HOST-SUFFIX,longbridgeapp.com,PROXY
+HOST-SUFFIX,longbridgehk.com,PROXY
+HOST-SUFFIX,longportapp.com,PROXY
+HOST-SUFFIX,longportapp.cn,PROXY
+HOST-SUFFIX,lbkrs.com,PROXY
+HOST-SUFFIX,lbctrl.com,PROXY
+HOST,quote.longbridge.global,PROXY
+HOST,trade.longportapp.com,PROXY
+HOST,openapi.longbridge.com,PROXY
+HOST,openapi-quote.longbridge.com,PROXY
+HOST,openapi-trade.longbridge.com,PROXY
+HOST,openapi.longbridge.cn,PROXY
+HOST,openapi-quote.longbridge.cn,PROXY
+HOST,openapi-trade.longbridge.cn,PROXY
+HOST-KEYWORD,longbridge,PROXY
+HOST-KEYWORD,longport,PROXY
+
+# Webull
+HOST-SUFFIX,webull.com,PROXY
+HOST-SUFFIX,webull.hk,PROXY
+HOST-SUFFIX,webull.com.hk,PROXY
+HOST-SUFFIX,wbrks.com,PROXY
+HOST-KEYWORD,webull,PROXY
+
+# US / international brokers
+HOST-SUFFIX,interactivebrokers.com,PROXY
+HOST-SUFFIX,interactivebrokers.com.hk,PROXY
+HOST-SUFFIX,interactivebrokers.co.uk,PROXY
+HOST-SUFFIX,ibkr.com,PROXY
+HOST-SUFFIX,ibkr.com.cn,PROXY
+HOST-SUFFIX,ibkr.com.hk,PROXY
+HOST-SUFFIX,ibkr.info,PROXY
+HOST-SUFFIX,ibkrguides.com,PROXY
+HOST-SUFFIX,ibllc.com,PROXY
+HOST-KEYWORD,interactivebrokers,PROXY
+HOST-KEYWORD,ibkr,PROXY
+HOST-KEYWORD,ibllc,PROXY
+HOST-SUFFIX,schwab.com,PROXY
+HOST-SUFFIX,schwab.com.cn,PROXY
+HOST-SUFFIX,schwab.com.hk,PROXY
+HOST-SUFFIX,schwab.co.uk,PROXY
+HOST-SUFFIX,schwabcdn.com,PROXY
+HOST-SUFFIX,schwabplan.com,PROXY
+HOST-SUFFIX,schwabassetmanagement.com,PROXY
+HOST-SUFFIX,tdameritrade.com,PROXY
+HOST-SUFFIX,thinkorswim.com,PROXY
+HOST-KEYWORD,schwab,PROXY
+HOST-KEYWORD,tdameritrade,PROXY
+HOST-KEYWORD,thinkorswim,PROXY
+HOST-SUFFIX,firstrade.com,PROXY
+HOST-SUFFIX,firstrade-chinese.com,PROXY
+HOST-KEYWORD,firstrade,PROXY
+HOST-SUFFIX,robinhood.com,PROXY
+HOST-SUFFIX,fidelity.com,PROXY
+HOST-SUFFIX,fidelity.com.hk,PROXY
+HOST-SUFFIX,etrade.com,PROXY
+HOST-SUFFIX,vanguard.com,PROXY
+HOST-SUFFIX,tastytrade.com,PROXY
+HOST-SUFFIX,tastyworks.com,PROXY
+HOST-SUFFIX,merrilledge.com,PROXY
+HOST-SUFFIX,ml.com,PROXY
+HOST-SUFFIX,morganstanley.com,PROXY
+HOST-SUFFIX,sofi.com,PROXY
+HOST-SUFFIX,sofi.hk,PROXY
+HOST-SUFFIX,sofi.com.hk,PROXY
+HOST-SUFFIX,bbae.com,PROXY
+HOST-SUFFIX,bbae.com.hk,PROXY
+HOST-SUFFIX,bbae.net,PROXY
+
+# HK broker / wealth apps, except Chief/Chi Fu which is kept DIRECT below.
+HOST-SUFFIX,brightsmart.com.hk,PROXY
+HOST-SUFFIX,bsgroup.com.hk,PROXY
+HOST-SUFFIX,phillip.com.hk,PROXY
+HOST-SUFFIX,poems.com.hk,PROXY
+HOST-SUFFIX,valuable.com.hk,PROXY
+HOST-SUFFIX,vcgroup.com.hk,PROXY
+HOST-SUFFIX,usmart.hk,PROXY
+HOST-SUFFIX,usmartsecurities.com,PROXY
+HOST-SUFFIX,eddid.com.hk,PROXY
+HOST-SUFFIX,eddid.cn,PROXY
+HOST-SUFFIX,eddidyzt.com,PROXY
+HOST-SUFFIX,eddidesop.com,PROXY
+HOST-SUFFIX,firstshanghai.com.hk,PROXY
+HOST-SUFFIX,mystockhk.com,PROXY
+HOST-SUFFIX,htisec.com,PROXY
+HOST-SUFFIX,htisec.net,PROXY
+HOST-SUFFIX,gtjai.com,PROXY
+HOST-SUFFIX,bocichina.com,PROXY
+HOST-SUFFIX,monexboom.com,PROXY
+HOST-SUFFIX,boom.com.hk,PROXY
+HOST-SUFFIX,fubonsec.com.hk,PROXY
+HOST-SUFFIX,fsmone.com,PROXY
+HOST-SUFFIX,fsmone.com.hk,PROXY
+HOST-SUFFIX,fundsupermart.com,PROXY
+HOST-SUFFIX,fundsupermart.com.hk,PROXY
+HOST-SUFFIX,ifastfinancial.com,PROXY
+HOST-SUFFIX,ifastcorp.com,PROXY
+
+# ============================================================
+# DIRECT - banks, payments, regulators, public market data,
+# and Chief/Chi Fu Securities exception
+# ============================================================
+
+# Chief Securities / Chi Fu / Megahub market data - keep Mainland direct.
+HOST-SUFFIX,chiefgroup.com.hk,DIRECT
+HOST-SUFFIX,chiefgroup.com,DIRECT
+HOST-SUFFIX,chieftrade.com,DIRECT
+HOST-SUFFIX,chiefsecurities.com.hk,DIRECT
+HOST-SUFFIX,chief.com.hk,DIRECT
+HOST-SUFFIX,chief-sec.com.hk,DIRECT
+HOST-SUFFIX,chief-website.oss-cn-hongkong.aliyuncs.com,DIRECT
+HOST-SUFFIX,chiefgroup.udeskglobal.com,DIRECT
+HOST-SUFFIX,megahubhk.com,DIRECT
+HOST-KEYWORD,chiefgroup,DIRECT
+HOST-KEYWORD,chieftrade,DIRECT
+HOST-KEYWORD,chiefsecurities,DIRECT
+HOST-KEYWORD,chief-sec,DIRECT
+HOST-KEYWORD,megahubhk,DIRECT
+
+# HK virtual banks and payment services
 HOST-SUFFIX,za.group,DIRECT
-HOST-SUFFIX,za.group.com,DIRECT
 HOST-SUFFIX,zabank.com.hk,DIRECT
 HOST-SUFFIX,zaintl.com,DIRECT
 HOST-SUFFIX,zaapi.com,DIRECT
-HOST-KEYWORD,zabank,DIRECT
-HOST-KEYWORD,za-bank,DIRECT
-HOST-KEYWORD,zaintl,DIRECT
-
-# --- Airstar Bank / 天星银行 ---
 HOST-SUFFIX,airstarbank.com,DIRECT
 HOST-SUFFIX,airstarbank.com.hk,DIRECT
-HOST-KEYWORD,airstar,DIRECT
-
-# --- WeLab Bank / 汇立银行 ---
 HOST-SUFFIX,welab.co,DIRECT
 HOST-SUFFIX,welab.bank,DIRECT
 HOST-SUFFIX,welab.com,DIRECT
@@ -26,73 +223,23 @@ HOST-SUFFIX,welabgroup.com,DIRECT
 HOST-SUFFIX,welabgroup.com.hk,DIRECT
 HOST-SUFFIX,welab-bank.com,DIRECT
 HOST-SUFFIX,welab-bank.com.hk,DIRECT
-HOST-KEYWORD,welab,DIRECT
-
-# --- Chief Securities / 致富证券 ---
-HOST-SUFFIX,chiefgroup.com.hk,DIRECT
-HOST-SUFFIX,chiefsecurities.com.hk,DIRECT
-HOST-SUFFIX,chief.com.hk,DIRECT
-HOST-SUFFIX,chief-sec.com.hk,DIRECT
-HOST-KEYWORD,chiefgroup,DIRECT
-HOST-KEYWORD,chiefsecurities,DIRECT
-HOST-KEYWORD,chief-sec,DIRECT
-
-# --- Interactive Brokers / IBKR / 盈透证券 ---
-HOST-SUFFIX,interactivebrokers.com,DIRECT
-HOST-SUFFIX,interactivebrokers.com.hk,DIRECT
-HOST-SUFFIX,interactivebrokers.co.uk,DIRECT
-HOST-SUFFIX,ibkr.com,DIRECT
-HOST-SUFFIX,ibllc.com,DIRECT
-HOST-SUFFIX,ibkr.info,DIRECT
-HOST-SUFFIX,ibkrguides.com,DIRECT
-HOST-SUFFIX,ibkr.com.cn,DIRECT
-HOST-SUFFIX,ibkr.com.hk,DIRECT
-HOST-KEYWORD,interactivebrokers,DIRECT
-HOST-KEYWORD,ibkr,DIRECT
-HOST-KEYWORD,ibllc,DIRECT
-
-# --- Charles Schwab / 嘉信理财证券 ---
-HOST-SUFFIX,schwab.com,DIRECT
-HOST-SUFFIX,schwabcdn.com,DIRECT
-HOST-SUFFIX,schwabplan.com,DIRECT
-HOST-SUFFIX,schwabassetmanagement.com,DIRECT
-HOST-SUFFIX,tdameritrade.com,DIRECT
-HOST-SUFFIX,thinkorswim.com,DIRECT
-HOST-KEYWORD,schwab,DIRECT
-HOST-KEYWORD,tdameritrade,DIRECT
-HOST-KEYWORD,thinkorswim,DIRECT
-
-# --- Ant Bank HK / 蚂蚁银行 ---
+HOST-SUFFIX,mox.com,DIRECT
+HOST-SUFFIX,mox.com.hk,DIRECT
+HOST-SUFFIX,livi.bank,DIRECT
+HOST-SUFFIX,paob.com.hk,DIRECT
+HOST-SUFFIX,fusionbank.com,DIRECT
+HOST-SUFFIX,fusionbank.com.hk,DIRECT
 HOST-SUFFIX,antbank.hk,DIRECT
 HOST-SUFFIX,antbank.com.hk,DIRECT
 HOST-SUFFIX,antgroup.com,DIRECT
 HOST-SUFFIX,antfin.com,DIRECT
 HOST-SUFFIX,alipayhk.com,DIRECT
 HOST-SUFFIX,alipay.hk,DIRECT
-HOST-SUFFIX,mybank.cn,DIRECT
-HOST-KEYWORD,antbank,DIRECT
-HOST-KEYWORD,ant-bank,DIRECT
-HOST-KEYWORD,antgroup,DIRECT
-HOST-KEYWORD,alipayhk,DIRECT
+HOST-SUFFIX,octopus.com.hk,DIRECT
+HOST-SUFFIX,octopuscards.com,DIRECT
+HOST-SUFFIX,jetco.com.hk,DIRECT
 
-# --- FSMOne / Fundsupermart ---
-HOST-SUFFIX,fsmone.com,DIRECT
-HOST-SUFFIX,fsmone.com.hk,DIRECT
-HOST-SUFFIX,fundsupermart.com,DIRECT
-HOST-SUFFIX,fundsupermart.com.hk,DIRECT
-HOST-SUFFIX,ifastfinancial.com,DIRECT
-HOST-SUFFIX,ifastcorp.com,DIRECT
-HOST-KEYWORD,fsmone,DIRECT
-HOST-KEYWORD,fundsupermart,DIRECT
-HOST-KEYWORD,ifast,DIRECT
-
-# --- BBAE ---
-HOST-SUFFIX,bbae.com,DIRECT
-HOST-SUFFIX,bbae.com.hk,DIRECT
-HOST-SUFFIX,bbae.net,DIRECT
-HOST-KEYWORD,bbae,DIRECT
-
-# --- HSBC Hong Kong / 汇丰香港 ---
+# Major HK banks
 HOST-SUFFIX,hsbc.com.hk,DIRECT
 HOST-SUFFIX,hsbc.com,DIRECT
 HOST-SUFFIX,hsbcnet.com,DIRECT
@@ -101,14 +248,30 @@ HOST-SUFFIX,hsbcamanah.com,DIRECT
 HOST-SUFFIX,hsbc.com.cn,DIRECT
 HOST-SUFFIX,hsbc.com.sg,DIRECT
 HOST-SUFFIX,hsbchk.com,DIRECT
-HOST-KEYWORD,hsbc,DIRECT
-HOST-KEYWORD,hangseng,DIRECT
 HOST-SUFFIX,hangseng.com,DIRECT
 HOST-SUFFIX,hangseng.com.hk,DIRECT
+HOST-SUFFIX,bochk.com,DIRECT
+HOST-SUFFIX,bochk.com.hk,DIRECT
+HOST-SUFFIX,citibank.com.hk,DIRECT
+HOST-SUFFIX,citi.com.hk,DIRECT
+HOST-SUFFIX,sc.com.hk,DIRECT
+HOST-SUFFIX,standardchartered.com.hk,DIRECT
+HOST-SUFFIX,dbs.com.hk,DIRECT
+HOST-SUFFIX,dbs.com,DIRECT
+HOST-SUFFIX,hkbea.com,DIRECT
+HOST-SUFFIX,dahsing.com,DIRECT
+HOST-SUFFIX,winglungbank.com,DIRECT
+HOST-SUFFIX,bochkhk.com,DIRECT
+HOST-SUFFIX,cncbinternational.com,DIRECT
+HOST-SUFFIX,asia.ccb.com,DIRECT
+HOST-SUFFIX,publicbank.com.hk,DIRECT
+HOST-SUFFIX,ocbc.com.hk,DIRECT
+HOST-SUFFIX,aeon.com.hk,DIRECT
+HOST-SUFFIX,jpmorgan.com,DIRECT
+HOST-SUFFIX,jpmorganchase.com,DIRECT
 
-# --- 投资全速易 / i-Invest / AAStocks 相关金融行情与交易服务 ---
+# HK public market data, exchange and regulators
 HOST-SUFFIX,i-invest.com.hk,DIRECT
-HOST-SUFFIX,i-innvest.com,DIRECT
 HOST-SUFFIX,aastocks.com,DIRECT
 HOST-SUFFIX,aastocks.com.hk,DIRECT
 HOST-SUFFIX,etnet.com.hk,DIRECT
@@ -118,27 +281,6 @@ HOST-SUFFIX,hkexnews.hk,DIRECT
 HOST-SUFFIX,hkma.gov.hk,DIRECT
 HOST-SUFFIX,sfc.hk,DIRECT
 HOST-KEYWORD,i-invest,DIRECT
-HOST-KEYWORD,invest,DIRECT
 HOST-KEYWORD,aastocks,DIRECT
 HOST-KEYWORD,etnet,DIRECT
 HOST-KEYWORD,hkex,DIRECT
-
-# --- 通用金融登录 / 风控 / CDN 辅助域名（谨慎：仅香港金融常见服务）---
-HOST-SUFFIX,bochk.com,DIRECT
-HOST-SUFFIX,bochk.com.hk,DIRECT
-HOST-SUFFIX,hangseng.com.hk,DIRECT
-HOST-SUFFIX,jpmorgan.com,DIRECT
-HOST-SUFFIX,jpmorganchase.com,DIRECT
-HOST-SUFFIX,citibank.com.hk,DIRECT
-HOST-SUFFIX,citi.com.hk,DIRECT
-HOST-SUFFIX,sc.com.hk,DIRECT
-HOST-SUFFIX,standardchartered.com.hk,DIRECT
-HOST-SUFFIX,dbs.com.hk,DIRECT
-HOST-SUFFIX,dbs.com,DIRECT
-
-# --- 常见 ASN / IP 辅助：香港交易所、IBKR、Schwab 等公网段可能变化，优先域名规则 ---
-# 如遇 Quantumult X 版本不支持 IP-ASN，可删除以下行
-IP-ASN,14618,DIRECT,no-resolve
-IP-ASN,16509,DIRECT,no-resolve
-IP-ASN,15169,DIRECT,no-resolve
-IP-ASN,8075,DIRECT,no-resolve

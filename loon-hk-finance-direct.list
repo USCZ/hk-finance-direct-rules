@@ -1,10 +1,9 @@
-# Shadowrocket - HK / US finance routing for Mainland China
+# Loon - HK / US finance routing for Mainland China
 # Policy: affected HK/US brokerage apps -> PROXY; banks, payment, regulators,
 # public market data, and Chief/Chi Fu Securities -> DIRECT.
 # Replace PROXY with your own proxy policy/group name if needed.
 # Do not wrap this file with a single policy; it already mixes PROXY and DIRECT.
 
-[Rule]
 
 # ============================================================
 # PROXY - Mainland-restricted or cross-border brokerage apps
