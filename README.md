@@ -1,6 +1,6 @@
 # HK / US Finance Routing Rules
 
-面向 6 月 22 日后中国大陆网络环境下的香港、美国券商和香港银行 App 分流规则。
+本项目维护香港、美国券商和香港银行 App 的精细分流规则，按服务类型区分代理和直连。
 
 核心结论：
 
@@ -28,7 +28,7 @@
 - 致富相关规则放在三份规则文件最前面，优先于所有 `PROXY` 规则。
 - 显式补齐 `api`、`api2`、`cas`、`toptrader`、`quote`、`service`、`speedweb`、`common-h5`、`chief-deposit` 等致富 App 子域。
 - 显式补齐 Megahub 行情流：`charts`、`shield`、`xml`、`mtstreamer`、`mtprsstreamer`。
-- 少量常见公网 IP / VPN 检测接口也走 `DIRECT`，减少“出口 IP 是代理”导致的误报。
+- 不包含全局公网 IP / VPN 检测接口规则，避免富途、老虎等需要代理的券商误走大陆出口 IP。
 
 配置时必须注意：
 

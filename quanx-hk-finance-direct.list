@@ -51,19 +51,6 @@ HOST,mtstreamer.megahubhk.com,DIRECT
 HOST,mtprsstreamer.megahubhk.com,DIRECT
 HOST-KEYWORD,megahubhk,DIRECT
 
-# Common public-IP / VPN reputation checks used by finance apps.
-# Keeping these DIRECT reduces false "VPN/proxy in use" prompts.
-HOST,api.myip.com,DIRECT
-HOST,checkip.amazonaws.com,DIRECT
-HOST,myip.ipip.net,DIRECT
-HOST-SUFFIX,icanhazip.com,DIRECT
-HOST-SUFFIX,ident.me,DIRECT
-HOST-SUFFIX,ifconfig.me,DIRECT
-HOST-SUFFIX,ip-api.com,DIRECT
-HOST-SUFFIX,ipify.org,DIRECT
-HOST-SUFFIX,ipinfo.io,DIRECT
-HOST-SUFFIX,ip.sb,DIRECT
-
 # ============================================================
 # PROXY - Mainland-restricted or cross-border brokerage apps
 # ============================================================
@@ -248,8 +235,7 @@ HOST-SUFFIX,ifastfinancial.com,PROXY
 HOST-SUFFIX,ifastcorp.com,PROXY
 
 # ============================================================
-# DIRECT - banks, payments, regulators, public market data,
-# and Chief/Chi Fu Securities exception
+# DIRECT - banks, payments, regulators, and public market data
 # ============================================================
 
 # HK virtual banks and payment services
