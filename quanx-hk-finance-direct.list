@@ -5,6 +5,66 @@
 # Do not add force-policy in [filter_remote]; this file already mixes policies.
 
 # ============================================================
+# DIRECT - Chief Securities / Chi Fu hard bypass
+# Keep this block before every PROXY rule. Chief can show a VPN
+# warning if its trading, quote, H5, support, or IP-check traffic
+# exits through a proxy.
+# ============================================================
+
+# Chief Securities / Chi Fu / Chief Trade / Chief Group
+HOST-SUFFIX,chiefgroup.com.hk,DIRECT
+HOST-SUFFIX,chiefgroup.com,DIRECT
+HOST-SUFFIX,chieftrade.com,DIRECT
+HOST-SUFFIX,chiefsecurities.com.hk,DIRECT
+HOST-SUFFIX,chief.com.hk,DIRECT
+HOST-SUFFIX,chief-sec.com.hk,DIRECT
+HOST,api.chiefgroup.com.hk,DIRECT
+HOST,api2.chiefgroup.com.hk,DIRECT
+HOST,ca.chiefgroup.com.hk,DIRECT
+HOST,cas.chiefgroup.com.hk,DIRECT
+HOST,cdn.chiefgroup.com.hk,DIRECT
+HOST,chief-deposit.chiefgroup.com.hk,DIRECT
+HOST,common-h5.chiefgroup.com.hk,DIRECT
+HOST,df.chiefgroup.com.hk,DIRECT
+HOST,ipo-h5.chiefgroup.com.hk,DIRECT
+HOST,quote.chiefgroup.com.hk,DIRECT
+HOST,service.chiefgroup.com.hk,DIRECT
+HOST,speedweb.chiefgroup.com.hk,DIRECT
+HOST,toptrader.chiefgroup.com.hk,DIRECT
+HOST,toptrader1.chiefgroup.com.hk,DIRECT
+HOST,toptrader2.chiefgroup.com.hk,DIRECT
+HOST,toptrader3.chiefgroup.com.hk,DIRECT
+HOST,toptrader4.chiefgroup.com.hk,DIRECT
+HOST-SUFFIX,chief-website.oss-cn-hongkong.aliyuncs.com,DIRECT
+HOST-SUFFIX,chiefgroup.udeskglobal.com,DIRECT
+HOST-KEYWORD,chiefgroup,DIRECT
+HOST-KEYWORD,chieftrade,DIRECT
+HOST-KEYWORD,chiefsecurities,DIRECT
+HOST-KEYWORD,chief-sec,DIRECT
+
+# Megahub quote/streaming services used by Chief apps
+HOST-SUFFIX,megahubhk.com,DIRECT
+HOST,charts.megahubhk.com,DIRECT
+HOST,shield.megahubhk.com,DIRECT
+HOST,xml.megahubhk.com,DIRECT
+HOST,mtstreamer.megahubhk.com,DIRECT
+HOST,mtprsstreamer.megahubhk.com,DIRECT
+HOST-KEYWORD,megahubhk,DIRECT
+
+# Common public-IP / VPN reputation checks used by finance apps.
+# Keeping these DIRECT reduces false "VPN/proxy in use" prompts.
+HOST,api.myip.com,DIRECT
+HOST,checkip.amazonaws.com,DIRECT
+HOST,myip.ipip.net,DIRECT
+HOST-SUFFIX,icanhazip.com,DIRECT
+HOST-SUFFIX,ident.me,DIRECT
+HOST-SUFFIX,ifconfig.me,DIRECT
+HOST-SUFFIX,ip-api.com,DIRECT
+HOST-SUFFIX,ipify.org,DIRECT
+HOST-SUFFIX,ipinfo.io,DIRECT
+HOST-SUFFIX,ip.sb,DIRECT
+
+# ============================================================
 # PROXY - Mainland-restricted or cross-border brokerage apps
 # ============================================================
 
@@ -191,22 +251,6 @@ HOST-SUFFIX,ifastcorp.com,PROXY
 # DIRECT - banks, payments, regulators, public market data,
 # and Chief/Chi Fu Securities exception
 # ============================================================
-
-# Chief Securities / Chi Fu / Megahub market data - keep Mainland direct.
-HOST-SUFFIX,chiefgroup.com.hk,DIRECT
-HOST-SUFFIX,chiefgroup.com,DIRECT
-HOST-SUFFIX,chieftrade.com,DIRECT
-HOST-SUFFIX,chiefsecurities.com.hk,DIRECT
-HOST-SUFFIX,chief.com.hk,DIRECT
-HOST-SUFFIX,chief-sec.com.hk,DIRECT
-HOST-SUFFIX,chief-website.oss-cn-hongkong.aliyuncs.com,DIRECT
-HOST-SUFFIX,chiefgroup.udeskglobal.com,DIRECT
-HOST-SUFFIX,megahubhk.com,DIRECT
-HOST-KEYWORD,chiefgroup,DIRECT
-HOST-KEYWORD,chieftrade,DIRECT
-HOST-KEYWORD,chiefsecurities,DIRECT
-HOST-KEYWORD,chief-sec,DIRECT
-HOST-KEYWORD,megahubhk,DIRECT
 
 # HK virtual banks and payment services
 HOST-SUFFIX,za.group,DIRECT

@@ -21,6 +21,25 @@
 
 规则内已经写好 `PROXY` / `DIRECT`，不要在客户端里对整份规则再套统一策略，否则银行直连或券商代理会被覆盖。如果你的代理策略组不叫 `PROXY`，把三个文件里的 `PROXY` 批量替换成自己的策略组名。
 
+## 致富证券 VPN 提示修复
+
+致富证券 / Chief Securities 已做成“硬直连”：
+
+- 致富相关规则放在三份规则文件最前面，优先于所有 `PROXY` 规则。
+- 显式补齐 `api`、`api2`、`cas`、`toptrader`、`quote`、`service`、`speedweb`、`common-h5`、`chief-deposit` 等致富 App 子域。
+- 显式补齐 Megahub 行情流：`charts`、`shield`、`xml`、`mtstreamer`、`mtprsstreamer`。
+- 少量常见公网 IP / VPN 检测接口也走 `DIRECT`，减少“出口 IP 是代理”导致的误报。
+
+配置时必须注意：
+
+1. 把本规则放在其他 Global、Proxy、Broker、港股券商大规则之前。
+2. Quantumult X 不要写 `force-policy=PROXY` 或 `force-policy=DIRECT`。
+3. Shadowrocket 不要用 `RULE-SET,URL,PROXY` 包整份文件；直接导入/复制本仓库的 `[Rule]` 内容。
+4. Loon 不要给整份远程规则套统一策略。
+5. 修改后重载配置，关闭致富 App 后重新打开；必要时切一次飞行模式清掉长连接。
+
+如果这样仍提示 VPN，原因通常不是域名分流，而是 App 在 iOS 上检测到了系统 VPN / Network Extension 接口本身。iOS 的 Shadowrocket、Quantumult X、Loon 即使某条规则是 `DIRECT`，连接仍会经过本机 VPN 扩展接管；能检测 `utun`/VPN 状态的 App 仍可能提示。这个场景只能用路由器旁路代理、局域网透明代理、关掉代理 App 后使用致富，或在支持按 App 排除的系统/客户端上把致富 App 排除出 VPN。
+
 ## 一键导入
 
 ### Shadowrocket
