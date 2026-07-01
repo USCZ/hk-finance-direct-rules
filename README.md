@@ -38,7 +38,9 @@
 4. Loon 不要给整份远程规则套统一策略。
 5. 修改后重载配置，关闭致富 App 后重新打开；必要时切一次飞行模式清掉长连接。
 
-如果这样仍提示 VPN，原因通常不是域名分流，而是 App 在 iOS 上检测到了系统 VPN / Network Extension 接口本身。iOS 的 Shadowrocket、Quantumult X、Loon 即使某条规则是 `DIRECT`，连接仍会经过本机 VPN 扩展接管；能检测 `utun`/VPN 状态的 App 仍可能提示。这个场景只能用路由器旁路代理、局域网透明代理、关掉代理 App 后使用致富，或在支持按 App 排除的系统/客户端上把致富 App 排除出 VPN。
+如果这样仍提示 VPN，原因通常不是域名分流，而是 App 在 iOS 上检测到了系统 VPN / Network Extension 接口本身。iOS 的 Shadowrocket、Quantumult X、Loon 即使某条规则是 `DIRECT`，连接仍会经过本机 VPN 扩展接管；能检测 `utun`/VPN 状态的 App 仍可能提示。
+
+这类系统级检测不能靠域名规则隐藏，也不能通过本仓库让“所有 App 无法识别已开启 VPN”。可行做法是让设备本身不启用本机 VPN：使用路由器旁路代理、局域网透明代理；使用致富时关闭代理 App；或在支持按 App 排除的系统/客户端上把致富 App 排除出 VPN。
 
 ## 一键导入
 
