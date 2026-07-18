@@ -30,7 +30,7 @@
 
 | 服务 | 策略 | 证据 | 审计结论 |
 | --- | --- | --- | --- |
-| 致富证券 / Chief Trade / Megahub | `DIRECT` | A、B | 官网当前引用 `api2.chiefgroup.com.hk`、`common-h5.chiefgroup.com.hk`、`service.chiefgroup.com.hk`、`chieftrade.com` 等；现有品牌域和行情域保持直连。App 的“关闭网络工具”提示可能是系统 VPN 接口检测，域名直连无法隐藏该接口。 |
+| 致富证券 / Chief Trade / Megahub | `DIRECT` | A、B、设备日志 | 官网当前引用 `api2.chiefgroup.com.hk`、`common-h5.chiefgroup.com.hk`、`service.chiefgroup.com.hk`、`chieftrade.com` 等。Shadowrocket 历史请求库还记录了 `cm-chiefgroup.com`、`zft2000.com`、`zft2025.com`、`chieftrader1979.com`、`toptrader1979.com`、`cg1979.com` 及其 `api2`、`quote`、`service`、`common-h5`、`ipo-h5`、`chief-deposit`、`cdn` 子域，均补为硬直连。日志不含进程名，仍需隔离启动采样确认 App 归因。App 的“关闭网络工具”提示也可能是系统 VPN 接口检测，域名直连无法隐藏该接口。 |
 | 富途 / Futubull / moomoo | `PROXY` | A、B | 官网与近期公共库共同确认品牌主域。新增 `futuhk1.com`、`futuoa.com`、`futusg.com`、`futunnimg.com`、`futubull.com`、`futuie.com` 及已确认的 moomoo 区域域名。 |
 | 老虎证券 / TradeUp | `PROXY` | A、B | 官网当前引用 `tigertrade.app`、`itigergrowtha.com`，与公共库现有老虎品牌域合并。 |
 | 长桥 / Longport | `PROXY` | A、B | 官网当前使用 `longbridge.com`、`lbctrl.com`、`lbkrs.com`、`wbrks.com`；与 v2fly 和 Broker.list 一致。 |
@@ -66,7 +66,9 @@
 
 ## 实际客户端日志：待完成
 
-当前工作区未发现可用的 Shadowrocket、Quantumult X 或 Loon 请求日志。现有 plist、规则数据库和配置文件不能证明某次 App 启动实际访问了哪些域名。
+工作区发现了 Shadowrocket 历史请求数据库，时间覆盖 2026-05-25 至 2026-06-10，并从中提取到一组致富风格域名。日志记录了域名、命中结果和策略，但没有进程名，且采集时段还存在其他应用流量，因此只能证明设备曾访问这些域名，不能单独证明全部请求由致富 App 发起。
+
+此外，本机保存的若干旧 Quantumult X / Loon 配置没有引用本仓库规则；它们不能代表用户当前手机上的活动配置，但说明验证时必须先确认远程规则已启用并排在通用 Global / Proxy 规则之前。
 
 请在规则置于其他 Global / Proxy / Broker 规则之前的前提下，分别完成以下测试：
 
