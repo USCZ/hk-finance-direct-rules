@@ -18,6 +18,12 @@ HOST-SUFFIX,chieftrade.com,DIRECT
 HOST-SUFFIX,chiefsecurities.com.hk,DIRECT
 HOST-SUFFIX,chief.com.hk,DIRECT
 HOST-SUFFIX,chief-sec.com.hk,DIRECT
+HOST-SUFFIX,cm-chiefgroup.com,DIRECT
+HOST-SUFFIX,zft2000.com,DIRECT
+HOST-SUFFIX,zft2025.com,DIRECT
+HOST-SUFFIX,chieftrader1979.com,DIRECT
+HOST-SUFFIX,toptrader1979.com,DIRECT
+HOST-SUFFIX,cg1979.com,DIRECT
 HOST,api.chiefgroup.com.hk,DIRECT
 HOST,api2.chiefgroup.com.hk,DIRECT
 HOST,ca.chiefgroup.com.hk,DIRECT
@@ -61,6 +67,7 @@ HOST-SUFFIX,futu.cn,PROXY
 HOST-SUFFIX,futu.hk,PROXY
 HOST-SUFFIX,futu.link,PROXY
 HOST-SUFFIX,futuhk.com,PROXY
+HOST-SUFFIX,futuhk1.com,PROXY
 HOST-SUFFIX,futuhk2.com,PROXY
 HOST-SUFFIX,futuhkapp.com,PROXY
 HOST-SUFFIX,futuhn.com,PROXY
@@ -70,13 +77,18 @@ HOST-SUFFIX,futufin.com,PROXY
 HOST-SUFFIX,futuholdings.com,PROXY
 HOST-SUFFIX,futuinc.com,PROXY
 HOST-SUFFIX,futuniuniu.com,PROXY
+HOST-SUFFIX,futuoa.com,PROXY
+HOST-SUFFIX,futusg.com,PROXY
 HOST-SUFFIX,futubull.cn,PROXY
+HOST-SUFFIX,futubull.com,PROXY
 HOST-SUFFIX,futuesop.com,PROXY
 HOST-SUFFIX,futuchain.com,PROXY
 HOST-SUFFIX,futuau.com,PROXY
 HOST-SUFFIX,futustatic.com,PROXY
+HOST-SUFFIX,futunnimg.com,PROXY
 HOST-SUFFIX,fututrade.com,PROXY
 HOST-SUFFIX,fututrustee.com,PROXY
+HOST-SUFFIX,futuie.com,PROXY
 HOST-SUFFIX,futu0.com,PROXY
 HOST-SUFFIX,futu1.com,PROXY
 HOST-SUFFIX,futu2.com,PROXY
@@ -89,6 +101,9 @@ HOST-SUFFIX,futu8.com,PROXY
 HOST-SUFFIX,futu9.com,PROXY
 HOST-SUFFIX,moomoo.com,PROXY
 HOST-SUFFIX,moomoo.com.hk,PROXY
+HOST-SUFFIX,moomoo.com.au,PROXY
+HOST-SUFFIX,moomoo.sg,PROXY
+HOST-SUFFIX,moomoo.ca,PROXY
 HOST-SUFFIX,moomooequity.com,PROXY
 HOST-SUFFIX,moomoobull.com,PROXY
 HOST-SUFFIX,moomootrustee.com,PROXY
@@ -104,6 +119,7 @@ HOST,trade.futunn.com,PROXY
 # Tiger Brokers / TradeUp
 HOST-SUFFIX,itiger.com,PROXY
 HOST-SUFFIX,itigerup.com,PROXY
+HOST-SUFFIX,itigergrowtha.com,PROXY
 HOST-SUFFIX,tigerbrokers.com,PROXY
 HOST-SUFFIX,tigerbrokers.com.hk,PROXY
 HOST-SUFFIX,tigerbrokers.net,PROXY
@@ -116,6 +132,7 @@ HOST-SUFFIX,xiaohu8.com,PROXY
 HOST-SUFFIX,zhijianfengyi.com,PROXY
 HOST-SUFFIX,zhijianfengyi.cn,PROXY
 HOST-SUFFIX,tradeup.com,PROXY
+HOST-SUFFIX,tigertrade.app,PROXY
 
 # Longbridge / Longport
 HOST-SUFFIX,longbridge.com,PROXY
@@ -144,11 +161,18 @@ HOST-SUFFIX,webull.com,PROXY
 HOST-SUFFIX,webull.hk,PROXY
 HOST-SUFFIX,webull.com.hk,PROXY
 HOST-SUFFIX,wbrks.com,PROXY
+HOST-SUFFIX,webullfintech.com,PROXY
 
 # DIRECT - US / international brokers (default)
 HOST-SUFFIX,interactivebrokers.com,DIRECT
 HOST-SUFFIX,interactivebrokers.com.hk,DIRECT
 HOST-SUFFIX,interactivebrokers.co.uk,DIRECT
+HOST-SUFFIX,interactivebrokers.ca,DIRECT
+HOST-SUFFIX,interactivebrokers.co.in,DIRECT
+HOST-SUFFIX,interactivebrokers.co.jp,DIRECT
+HOST-SUFFIX,interactivebrokers.com.au,DIRECT
+HOST-SUFFIX,interactivebrokers.com.sg,DIRECT
+HOST-SUFFIX,interactivebrokers.ie,DIRECT
 HOST-SUFFIX,ibkr.com,DIRECT
 HOST-SUFFIX,ibkr.com.cn,DIRECT
 HOST-SUFFIX,ibkr.com.hk,DIRECT
@@ -156,8 +180,10 @@ HOST-SUFFIX,ibkr.info,DIRECT
 HOST-SUFFIX,ibkrguides.com,DIRECT
 HOST-SUFFIX,ibllc.com,DIRECT
 HOST-SUFFIX,schwab.com,DIRECT
+HOST-SUFFIX,aboutschwab.com,DIRECT
 HOST-SUFFIX,schwab.com.cn,DIRECT
 HOST-SUFFIX,schwab.com.hk,DIRECT
+HOST-SUFFIX,schwab.com.sg,DIRECT
 HOST-SUFFIX,schwab.co.uk,DIRECT
 HOST-SUFFIX,schwabcdn.com,DIRECT
 HOST-SUFFIX,schwabplan.com,DIRECT
@@ -184,10 +210,16 @@ HOST-SUFFIX,bbae.com.hk,DIRECT
 HOST-SUFFIX,bbae.net,DIRECT
 
 # DIRECT - HK broker / wealth apps (default)
+HOST-SUFFIX,fotechwealth.com,DIRECT
+HOST-SUFFIX,fotechwealth.com.cn,DIRECT
+HOST-SUFFIX,fosunwealth.com,DIRECT
+HOST-SUFFIX,fosunhani.com,DIRECT
 HOST-SUFFIX,brightsmart.com.hk,DIRECT
 HOST-SUFFIX,bsgroup.com.hk,DIRECT
 HOST-SUFFIX,phillip.com.hk,DIRECT
 HOST-SUFFIX,poems.com.hk,DIRECT
+HOST-SUFFIX,phillipfunds.com.hk,DIRECT
+HOST-SUFFIX,cyberquote.com.hk,DIRECT
 HOST-SUFFIX,valuable.com.hk,DIRECT
 HOST-SUFFIX,vcgroup.com.hk,DIRECT
 HOST-SUFFIX,usmart.hk,DIRECT
@@ -221,6 +253,8 @@ HOST-SUFFIX,za.group,DIRECT
 HOST-SUFFIX,zabank.com.hk,DIRECT
 HOST-SUFFIX,zaintl.com,DIRECT
 HOST-SUFFIX,zaapi.com,DIRECT
+HOST-SUFFIX,zaticdn.com,DIRECT
+HOST-SUFFIX,zajourney.com,DIRECT
 HOST-SUFFIX,airstarbank.com,DIRECT
 HOST-SUFFIX,airstarbank.com.hk,DIRECT
 HOST-SUFFIX,welab.co,DIRECT
@@ -251,6 +285,8 @@ HOST-SUFFIX,jetco.com.hk,DIRECT
 HOST-SUFFIX,hsbc.com.hk,DIRECT
 HOST-SUFFIX,hsbc.com,DIRECT
 HOST-SUFFIX,hsbcnet.com,DIRECT
+HOST-SUFFIX,hsbc.net,DIRECT
+HOST-SUFFIX,hsbcinnovationbanking.com,DIRECT
 HOST-SUFFIX,hsbcprivatebank.com,DIRECT
 HOST-SUFFIX,hsbcamanah.com,DIRECT
 HOST-SUFFIX,hsbc.com.cn,DIRECT
@@ -271,6 +307,7 @@ HOST-SUFFIX,dahsing.com,DIRECT
 HOST-SUFFIX,winglungbank.com,DIRECT
 HOST-SUFFIX,bochkhk.com,DIRECT
 HOST-SUFFIX,cncbinternational.com,DIRECT
+HOST-SUFFIX,ccb.com,DIRECT
 HOST-SUFFIX,asia.ccb.com,DIRECT
 HOST-SUFFIX,publicbank.com.hk,DIRECT
 HOST-SUFFIX,ocbc.com.hk,DIRECT
