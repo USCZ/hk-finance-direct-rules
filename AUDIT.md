@@ -49,7 +49,7 @@
 | ZA Bank | `DIRECT` | A、B | 官网当前使用 `za.group`、`zaticdn.com`、`zajourney.com`，后两项已补入。`za.group.com` 是可疑历史/错误项，不收录。 |
 | Airstar、WeLab、Mox、livi、PAOb、Fusion Bank、Ant Bank HK | `DIRECT` | A/C | 品牌主域保持直连。`mybank.cn` 属于另一项内地银行服务，不作为 Ant Bank HK 域名加入。 |
 | HSBC / Hang Seng | `DIRECT` | A、B | 官网确认现有香港域，并补入 `hsbc.net`、`hsbcinnovationbanking.com`。品牌域之外的 AXA、调查、标签管理等第三方域不纳入金融专项规则。 |
-| BOCHK、Citi HK、Standard Chartered HK、DBS HK、BEA、Dah Sing、CMB Wing Lung、CNCBI、CCB Asia、Public Bank HK、OCBC HK | `DIRECT` | A/C | 官方品牌主域保持直连；尚无可靠证据要求外国 IP。 |
+| BOCHK、Citi HK、Standard Chartered HK、DBS HK、BEA、Dah Sing、CMB Wing Lung、CNCBI、CCB Asia、Public Bank HK、OCBC HK | `DIRECT` | A/C、设备日志 | 官方品牌主域保持直连；历史 Shadowrocket 日志实际出现 `www.ccb.com`，因此补入建行官方根域 `ccb.com`。尚无可靠证据要求外国 IP。 |
 | AlipayHK、Octopus、JETCO | `DIRECT` | A/C | 支付服务默认直连，避免代理出口触发额外风控。 |
 
 ## 明确拒绝的候选项
@@ -68,7 +68,7 @@
 
 工作区发现了 Shadowrocket 历史请求数据库，时间覆盖 2026-05-25 至 2026-06-10，并从中提取到一组致富风格域名。日志记录了域名、命中结果和策略，但没有进程名，且采集时段还存在其他应用流量，因此只能证明设备曾访问这些域名，不能单独证明全部请求由致富 App 发起。
 
-此外，本机保存的若干旧 Quantumult X / Loon 配置没有引用本仓库规则；它们不能代表用户当前手机上的活动配置，但说明验证时必须先确认远程规则已启用并排在通用 Global / Proxy 规则之前。
+此外，本机保存的若干旧 Quantumult X / Loon 配置没有引用本仓库规则，Shadowrocket 当前规则数据库中也没有致富相关条目。它们不能代表用户当前手机上的活动配置，但说明验证时必须先确认远程规则已实际加载、处于启用状态，并排在通用 Global / Proxy 规则之前。
 
 请在规则置于其他 Global / Proxy / Broker 规则之前的前提下，分别完成以下测试：
 
