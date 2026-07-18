@@ -2,6 +2,8 @@
 
 本项目为 Shadowrocket、Quantumult X 和 Loon 提供香港 / 美国券商、香港银行及相关金融服务的分流规则。
 
+最新逐项证据、拒绝收录项及客户端日志验证方法见 [`AUDIT.md`](AUDIT.md)。
+
 ## 分流原则
 
 **默认 `DIRECT`，仅把明确需要非中国大陆 IP 的服务设为 `PROXY`。**
