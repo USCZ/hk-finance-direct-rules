@@ -8,10 +8,10 @@
 
 - 香港和美国银行、支付、交易所、监管、行情服务默认 `DIRECT`。
 - 香港券商与未发现中国大陆网络阻断证据的美国 / 国际券商默认 `DIRECT`。
-- 富途、老虎、长桥、Webull，以及 IBKR、Schwab、Firstrade 使用 `PROXY`。
+- 富途、老虎、长桥、Webull、Schwab、Firstrade 使用 `PROXY`；IBKR 仅国际主域 `interactivebrokers.com` 使用 `PROXY`，区域站和交易网关直连。
 - `PROXY` 只使用品牌主域和明确后端域名；不加入共享统计、共享云域、大段 IP-CIDR 或宽泛代理关键词。
 
-IBKR、Schwab、Firstrade 并非因为“美国券商”这一身份而代理，而是其主域同时出现在当前 `gfwlist` 和 Blackmatrix7 Proxy 域列表中。其他美国券商没有同等级证据，继续直连。
+IBKR、Schwab、Firstrade 并非因为“美国券商”这一身份而代理，而是特定主域同时出现在当前 `gfwlist` 和 Blackmatrix7 Proxy 域列表中。策略按精确证据边界应用，不扩展到同品牌但未被收录的区域站或交易网关。
 
 ## 证据等级
 
@@ -40,6 +40,7 @@ IBKR、Schwab、Firstrade 并非因为“美国券商”这一身份而代理，
 | `zhx60403/hk-finance-app-rules` | 2026-06-12 (`f167466`) | 核对香港银行、致富、IBKR、Schwab 等域名 |
 | `vtgpcmsvgs/rulemesh` | 2026-07-18 (`d7ab649`) | 核对香港券商品牌补充域名 |
 | `realseanch/seanrocket` | 2026-07-13 (`b00dcfc`) | 交叉检查香港银行直连域名 |
+| `iczrac/Filters-for-QuantumultX` 的 IBKR 主机清单 | 2024-05-08 (`d86a1cc`) | 区分国际门户、美欧网关、香港亚洲网关 `hdc1` 和中国网关 `mcgw1.ibllc.com.cn` |
 
 ## `PROXY` 例外审计
 
@@ -49,7 +50,7 @@ IBKR、Schwab、Firstrade 并非因为“美国券商”这一身份而代理，
 | 老虎证券 / Tiger / TradeUp | A、G、R | `itiger.com` 被两类 GFW 来源共同收录。补入官网区域域 `tigerbrokers.com.sg`、`tigerbrokers.com.au` 和品牌域 `tigersecurities.com`。 |
 | 长桥 / Longbridge / Longport | A、G、R | `longbridge.com` / `longbridge.global` 被两类 GFW 来源共同收录。补入近期券商库中的 `longbridge.app`。 |
 | Webull | A、R | 当前 GFW 双来源未精确收录 `webull.com`，但多个券商专项库及品牌资源共同显示其 App 使用独立境外后端；沿用用户场景中的代理例外，并补入 `webullapp.com`、`webullbroker.com`、`webulltrade.com`。证据强度低于 G 级服务。 |
-| IBKR / Interactive Brokers | A、G、R | `interactivebrokers.com` 同时被 gfwlist 与 Blackmatrix7 精确收录，改为 `PROXY`；补齐官方区域域、`interactiveadvisors.com` 和邮件服务域。 |
+| IBKR / Interactive Brokers | A、G、R | 只有国际主域 `interactivebrokers.com` 被 gfwlist 与 Blackmatrix7 同时精确收录，因此该域及子域走 `PROXY`。`ibkr.com`、`ibkr.com.cn`、香港和其他区域门户未被这两个来源精确收录，保持 `DIRECT`。TWS / IB Gateway 的 `ibllc.com`、中国网关 `ibllc.com.cn`（包括 `mcgw1`）以及香港亚洲网关 `hdc1` 均保持 `DIRECT`。 |
 | Charles Schwab / TD Ameritrade / thinkorswim | A、G、R | `schwab.com` 同时被 gfwlist 与 Blackmatrix7 精确收录，改为 `PROXY`；补齐 `schwab.net`、`schwabapi.com`、`tos.mx`。 |
 | Firstrade | A、G、R | `firstrade.com` 同时被 gfwlist 与 Blackmatrix7 精确收录，改为 `PROXY`；补入 `firstrade.net`、`firstrade.us`。 |
 

@@ -21,11 +21,11 @@
 | 跨境互联网券商 | 老虎证券 / Tiger Brokers / TradeUp |
 | 跨境互联网券商 | 长桥 / Longbridge / Longport |
 | 跨境互联网券商 | Webull |
-| 中国大陆网络层受限的美国券商 | IBKR / Interactive Brokers |
+| 中国大陆网络层受限的美国券商 | IBKR 国际主站 `interactivebrokers.com`（区域站和交易网关直连） |
 | 中国大陆网络层受限的美国券商 | Charles Schwab / TD Ameritrade / thinkorswim |
 | 中国大陆网络层受限的美国券商 | Firstrade |
 
-IBKR、Schwab 和 Firstrade 同时出现在 2026-07-18 的 `gfwlist` 与 Blackmatrix7 Proxy 域名中，因此属于可复现的中国大陆网络层代理例外。Fidelity、E*Trade、Robinhood、TradeStation、Alpaca、Saxo、eToro、Trading 212、Plus500、耀才、辉立、华盛、uSmart、艾德、第一上海、海通国际、国泰海通、中银国际、FSMOne 等仍为 `DIRECT`。如果以后确认某个服务必须使用香港或美国 IP，应补充精确域名并单独加入 `PROXY` 例外，而不是把整类海外金融机构全部代理。
+IBKR 只有国际主域 `interactivebrokers.com` 被 2026-07-18 的 `gfwlist` 与 Blackmatrix7 同时精确收录，因此该主域走 `PROXY`；`ibkr.com`、各区域门户以及 `ibllc.com` / `ibllc.com.cn` TWS 和 IB Gateway 基础设施保持 `DIRECT`，让亚洲与中国网关直连。Schwab 和 Firstrade 的主域仍属于网络层代理例外。Fidelity、E*Trade、Robinhood、TradeStation、Alpaca、Saxo、eToro、Trading 212、Plus500、耀才、辉立、华盛、uSmart、艾德、第一上海、海通国际、国泰海通、中银国际、FSMOne 等仍为 `DIRECT`。
 
 ## 文件
 

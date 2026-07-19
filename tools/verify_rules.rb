@@ -19,6 +19,14 @@ REJECTED_VALUES = %w[
   jpush.cn
 ].freeze
 
+EXPECTED_POLICIES = {
+  ["DOMAIN-SUFFIX", "interactivebrokers.com"] => "PROXY",
+  ["DOMAIN-SUFFIX", "ibkr.com"] => "DIRECT",
+  ["DOMAIN-SUFFIX", "ibkr.com.cn"] => "DIRECT",
+  ["DOMAIN-SUFFIX", "ibllc.com"] => "DIRECT",
+  ["DOMAIN-SUFFIX", "ibllc.com.cn"] => "DIRECT"
+}.freeze
+
 def parse_rules(path, prefix)
   rules = {}
 
@@ -71,6 +79,11 @@ proxy_keywords = reference.select do |(type, _value), policy|
   type == "DOMAIN-KEYWORD" && policy == "PROXY"
 end
 abort "PROXY keyword rules are not allowed: #{proxy_keywords.keys.inspect}" unless proxy_keywords.empty?
+
+EXPECTED_POLICIES.each do |key, expected|
+  actual = reference[key]
+  abort "expected #{key.join(',')}=#{expected}, got #{actual.inspect}" unless actual == expected
+end
 
 suffixes = reference.select { |(type, _), _| type == "DOMAIN-SUFFIX" }
 suffixes.each do |(_type, child), child_policy|
