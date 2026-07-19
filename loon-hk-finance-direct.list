@@ -1,6 +1,6 @@
 # Loon - HK / US finance routing for Mainland China
-# Policy: finance services default to DIRECT. Only the explicit Mainland-IP
-# restricted broker allowlist below uses PROXY.
+# Policy: finance services default to DIRECT. Only the explicit Mainland-China
+# access exception allowlist below uses PROXY.
 # Replace PROXY with your own proxy policy/group name if needed.
 # Do not wrap this file with a single policy; it already mixes PROXY and DIRECT.
 
@@ -59,11 +59,12 @@ DOMAIN,mtprsstreamer.megahubhk.com,DIRECT
 DOMAIN-KEYWORD,megahubhk,DIRECT
 
 # ============================================================
-# PROXY exceptions - services known to require a non-Mainland IP
+# PROXY exceptions - Mainland network/IP access restrictions
 # ============================================================
 
 # Futu / Futubull / moomoo
 DOMAIN-SUFFIX,futu.com,PROXY
+DOMAIN-SUFFIX,futuapi.com,PROXY
 DOMAIN-SUFFIX,futu.cn,PROXY
 DOMAIN-SUFFIX,futu.hk,PROXY
 DOMAIN-SUFFIX,futu.link,PROXY
@@ -71,12 +72,14 @@ DOMAIN-SUFFIX,futuhk.com,PROXY
 DOMAIN-SUFFIX,futuhk1.com,PROXY
 DOMAIN-SUFFIX,futuhk2.com,PROXY
 DOMAIN-SUFFIX,futuhkapp.com,PROXY
+DOMAIN-SUFFIX,futuhongkong.com,PROXY
 DOMAIN-SUFFIX,futuhn.com,PROXY
 DOMAIN-SUFFIX,futunn.com,PROXY
 DOMAIN-SUFFIX,futunn.com.hk,PROXY
 DOMAIN-SUFFIX,futufin.com,PROXY
 DOMAIN-SUFFIX,futuholdings.com,PROXY
 DOMAIN-SUFFIX,futuinc.com,PROXY
+DOMAIN-SUFFIX,futuin.com,PROXY
 DOMAIN-SUFFIX,futuniuniu.com,PROXY
 DOMAIN-SUFFIX,futuoa.com,PROXY
 DOMAIN-SUFFIX,futusg.com,PROXY
@@ -90,6 +93,7 @@ DOMAIN-SUFFIX,futunnimg.com,PROXY
 DOMAIN-SUFFIX,fututrade.com,PROXY
 DOMAIN-SUFFIX,fututrustee.com,PROXY
 DOMAIN-SUFFIX,futuie.com,PROXY
+DOMAIN-SUFFIX,qtlcdn.com,PROXY
 DOMAIN-SUFFIX,futu0.com,PROXY
 DOMAIN-SUFFIX,futu1.com,PROXY
 DOMAIN-SUFFIX,futu2.com,PROXY
@@ -123,9 +127,12 @@ DOMAIN-SUFFIX,itigerup.com,PROXY
 DOMAIN-SUFFIX,itigergrowtha.com,PROXY
 DOMAIN-SUFFIX,tigerbrokers.com,PROXY
 DOMAIN-SUFFIX,tigerbrokers.com.hk,PROXY
+DOMAIN-SUFFIX,tigerbrokers.com.sg,PROXY
+DOMAIN-SUFFIX,tigerbrokers.com.au,PROXY
 DOMAIN-SUFFIX,tigerbrokers.net,PROXY
 DOMAIN-SUFFIX,tigerbrokers.nz,PROXY
 DOMAIN-SUFFIX,tigerfintech.com,PROXY
+DOMAIN-SUFFIX,tigersecurities.com,PROXY
 DOMAIN-SUFFIX,tigerbbs.com,PROXY
 DOMAIN-SUFFIX,tigerbbs.cn,PROXY
 DOMAIN-SUFFIX,laohu8.com,PROXY
@@ -142,6 +149,7 @@ DOMAIN-SUFFIX,longbridge.hk,PROXY
 DOMAIN-SUFFIX,longbridge.sg,PROXY
 DOMAIN-SUFFIX,longbridge.global,PROXY
 DOMAIN-SUFFIX,longbridge.cloud,PROXY
+DOMAIN-SUFFIX,longbridge.app,PROXY
 DOMAIN-SUFFIX,longbridgeapp.com,PROXY
 DOMAIN-SUFFIX,longbridgehk.com,PROXY
 DOMAIN-SUFFIX,longportapp.com,PROXY
@@ -163,52 +171,96 @@ DOMAIN-SUFFIX,webull.hk,PROXY
 DOMAIN-SUFFIX,webull.com.hk,PROXY
 DOMAIN-SUFFIX,wbrks.com,PROXY
 DOMAIN-SUFFIX,webullfintech.com,PROXY
+DOMAIN-SUFFIX,webullapp.com,PROXY
+DOMAIN-SUFFIX,webullbroker.com,PROXY
+DOMAIN-SUFFIX,webulltrade.com,PROXY
 
-# DIRECT - US / international brokers (default)
-DOMAIN-SUFFIX,interactivebrokers.com,DIRECT
-DOMAIN-SUFFIX,interactivebrokers.com.hk,DIRECT
-DOMAIN-SUFFIX,interactivebrokers.co.uk,DIRECT
-DOMAIN-SUFFIX,interactivebrokers.ca,DIRECT
-DOMAIN-SUFFIX,interactivebrokers.co.in,DIRECT
-DOMAIN-SUFFIX,interactivebrokers.co.jp,DIRECT
-DOMAIN-SUFFIX,interactivebrokers.com.au,DIRECT
-DOMAIN-SUFFIX,interactivebrokers.com.sg,DIRECT
-DOMAIN-SUFFIX,interactivebrokers.ie,DIRECT
-DOMAIN-SUFFIX,ibkr.com,DIRECT
-DOMAIN-SUFFIX,ibkr.com.cn,DIRECT
-DOMAIN-SUFFIX,ibkr.com.hk,DIRECT
-DOMAIN-SUFFIX,ibkr.info,DIRECT
-DOMAIN-SUFFIX,ibkrguides.com,DIRECT
-DOMAIN-SUFFIX,ibllc.com,DIRECT
-DOMAIN-SUFFIX,schwab.com,DIRECT
-DOMAIN-SUFFIX,aboutschwab.com,DIRECT
-DOMAIN-SUFFIX,schwab.com.cn,DIRECT
-DOMAIN-SUFFIX,schwab.com.hk,DIRECT
-DOMAIN-SUFFIX,schwab.com.sg,DIRECT
-DOMAIN-SUFFIX,schwab.co.uk,DIRECT
-DOMAIN-SUFFIX,schwabcdn.com,DIRECT
-DOMAIN-SUFFIX,schwabplan.com,DIRECT
-DOMAIN-SUFFIX,schwabassetmanagement.com,DIRECT
-DOMAIN-SUFFIX,tdameritrade.com,DIRECT
-DOMAIN-SUFFIX,thinkorswim.com,DIRECT
-DOMAIN-SUFFIX,firstrade.com,DIRECT
-DOMAIN-SUFFIX,firstrade-chinese.com,DIRECT
+# PROXY - US brokers independently listed by current GFW rule sources
+DOMAIN-SUFFIX,interactivebrokers.com,PROXY
+DOMAIN-SUFFIX,interactivebrokers.com.hk,PROXY
+DOMAIN-SUFFIX,interactivebrokers.co.uk,PROXY
+DOMAIN-SUFFIX,interactivebrokers.ca,PROXY
+DOMAIN-SUFFIX,interactivebrokers.co.in,PROXY
+DOMAIN-SUFFIX,interactivebrokers.co.jp,PROXY
+DOMAIN-SUFFIX,interactivebrokers.com.au,PROXY
+DOMAIN-SUFFIX,interactivebrokers.com.sg,PROXY
+DOMAIN-SUFFIX,interactivebrokers.ie,PROXY
+DOMAIN-SUFFIX,interactiveadvisors.com,PROXY
+DOMAIN-SUFFIX,interactivebrokers-email.com,PROXY
+DOMAIN-SUFFIX,ibkr.com,PROXY
+DOMAIN-SUFFIX,ibkr.com.cn,PROXY
+DOMAIN-SUFFIX,ibkr.com.hk,PROXY
+DOMAIN-SUFFIX,ibkr.info,PROXY
+DOMAIN-SUFFIX,ibkrguides.com,PROXY
+DOMAIN-SUFFIX,ibllc.com,PROXY
+DOMAIN-SUFFIX,schwab.com,PROXY
+DOMAIN-SUFFIX,aboutschwab.com,PROXY
+DOMAIN-SUFFIX,schwab.com.cn,PROXY
+DOMAIN-SUFFIX,schwab.com.hk,PROXY
+DOMAIN-SUFFIX,schwab.com.sg,PROXY
+DOMAIN-SUFFIX,schwab.co.uk,PROXY
+DOMAIN-SUFFIX,schwab.net,PROXY
+DOMAIN-SUFFIX,schwabapi.com,PROXY
+DOMAIN-SUFFIX,schwabcdn.com,PROXY
+DOMAIN-SUFFIX,schwabplan.com,PROXY
+DOMAIN-SUFFIX,schwabassetmanagement.com,PROXY
+DOMAIN-SUFFIX,tdameritrade.com,PROXY
+DOMAIN-SUFFIX,thinkorswim.com,PROXY
+DOMAIN-SUFFIX,tos.mx,PROXY
+DOMAIN-SUFFIX,firstrade.com,PROXY
+DOMAIN-SUFFIX,firstrade.net,PROXY
+DOMAIN-SUFFIX,firstrade.us,PROXY
+DOMAIN-SUFFIX,firstrade-chinese.com,PROXY
+
+# DIRECT - other US / international brokers (default)
 DOMAIN-SUFFIX,robinhood.com,DIRECT
+DOMAIN-SUFFIX,robinhoodcdn.com,DIRECT
+DOMAIN-SUFFIX,robinhoodmarkets.com,DIRECT
 DOMAIN-SUFFIX,fidelity.com,DIRECT
 DOMAIN-SUFFIX,fidelity.com.hk,DIRECT
+DOMAIN-SUFFIX,fidelityinvestments.com,DIRECT
+DOMAIN-SUFFIX,fidelityinternational.com,DIRECT
+DOMAIN-SUFFIX,fidelity.co.uk,DIRECT
+DOMAIN-SUFFIX,fidelity.ca,DIRECT
+DOMAIN-SUFFIX,fidelity.net,DIRECT
+DOMAIN-SUFFIX,fmr.com,DIRECT
+DOMAIN-SUFFIX,401k.com,DIRECT
+DOMAIN-SUFFIX,netbenefits.com,DIRECT
 DOMAIN-SUFFIX,etrade.com,DIRECT
 DOMAIN-SUFFIX,vanguard.com,DIRECT
 DOMAIN-SUFFIX,tastytrade.com,DIRECT
 DOMAIN-SUFFIX,tastyworks.com,DIRECT
+DOMAIN-SUFFIX,tastylive.com,DIRECT
 DOMAIN-SUFFIX,merrilledge.com,DIRECT
 DOMAIN-SUFFIX,ml.com,DIRECT
 DOMAIN-SUFFIX,morganstanley.com,DIRECT
+DOMAIN-SUFFIX,morganstanleyclientserv.com,DIRECT
+DOMAIN-SUFFIX,stockplanconnect.com,DIRECT
 DOMAIN-SUFFIX,sofi.com,DIRECT
 DOMAIN-SUFFIX,sofi.hk,DIRECT
 DOMAIN-SUFFIX,sofi.com.hk,DIRECT
 DOMAIN-SUFFIX,bbae.com,DIRECT
 DOMAIN-SUFFIX,bbae.com.hk,DIRECT
 DOMAIN-SUFFIX,bbae.net,DIRECT
+DOMAIN-SUFFIX,tradestation.com,DIRECT
+DOMAIN-SUFFIX,tradestation.io,DIRECT
+DOMAIN-SUFFIX,tradestationapi.com,DIRECT
+DOMAIN-SUFFIX,alpaca.markets,DIRECT
+DOMAIN-SUFFIX,alpacaapi.com,DIRECT
+DOMAIN-SUFFIX,home.saxo,DIRECT
+DOMAIN-SUFFIX,saxo.com,DIRECT
+DOMAIN-SUFFIX,saxobank.com,DIRECT
+DOMAIN-SUFFIX,saxotrader.com,DIRECT
+DOMAIN-SUFFIX,etoro.com,DIRECT
+DOMAIN-SUFFIX,etorostatic.com,DIRECT
+DOMAIN-SUFFIX,ig.com,DIRECT
+DOMAIN-SUFFIX,iggroup.com,DIRECT
+DOMAIN-SUFFIX,igmarkets.com,DIRECT
+DOMAIN-SUFFIX,trading212.com,DIRECT
+DOMAIN-SUFFIX,trading212.io,DIRECT
+DOMAIN-SUFFIX,plus500.com,DIRECT
+DOMAIN-SUFFIX,public.com,DIRECT
+DOMAIN-SUFFIX,publicinvest.com,DIRECT
 
 # DIRECT - HK broker / wealth apps (default)
 DOMAIN-SUFFIX,fotechwealth.com,DIRECT
@@ -222,9 +274,14 @@ DOMAIN-SUFFIX,poems.com.hk,DIRECT
 DOMAIN-SUFFIX,phillipfunds.com.hk,DIRECT
 DOMAIN-SUFFIX,cyberquote.com.hk,DIRECT
 DOMAIN-SUFFIX,valuable.com.hk,DIRECT
+DOMAIN-SUFFIX,vbkr.com,DIRECT
+DOMAIN-SUFFIX,hstong.com,DIRECT
+DOMAIN-SUFFIX,huashengtong.com,DIRECT
 DOMAIN-SUFFIX,vcgroup.com.hk,DIRECT
 DOMAIN-SUFFIX,usmart.hk,DIRECT
 DOMAIN-SUFFIX,usmartsecurities.com,DIRECT
+DOMAIN-SUFFIX,usmartglobal.com,DIRECT
+DOMAIN-SUFFIX,usmartsg.com,DIRECT
 DOMAIN-SUFFIX,eddid.com.hk,DIRECT
 DOMAIN-SUFFIX,eddid.cn,DIRECT
 DOMAIN-SUFFIX,eddidyzt.com,DIRECT
@@ -234,7 +291,29 @@ DOMAIN-SUFFIX,mystockhk.com,DIRECT
 DOMAIN-SUFFIX,htisec.com,DIRECT
 DOMAIN-SUFFIX,htisec.net,DIRECT
 DOMAIN-SUFFIX,gtjai.com,DIRECT
+DOMAIN-SUFFIX,gtja.com.hk,DIRECT
+DOMAIN-SUFFIX,gtht.com,DIRECT
 DOMAIN-SUFFIX,bocichina.com,DIRECT
+DOMAIN-SUFFIX,bocionline.com,DIRECT
+DOMAIN-SUFFIX,citics.com.hk,DIRECT
+DOMAIN-SUFFIX,swhyhk.com,DIRECT
+DOMAIN-SUFFIX,cmschina.com.hk,DIRECT
+DOMAIN-SUFFIX,gfgroup.com.hk,DIRECT
+DOMAIN-SUFFIX,chinastock.com.hk,DIRECT
+DOMAIN-SUFFIX,htsc.com.hk,DIRECT
+DOMAIN-SUFFIX,htsc.com.cn,DIRECT
+DOMAIN-SUFFIX,ebshk.com,DIRECT
+DOMAIN-SUFFIX,cinda.com.hk,DIRECT
+DOMAIN-SUFFIX,cicc.com,DIRECT
+DOMAIN-SUFFIX,cicc.com.cn,DIRECT
+DOMAIN-SUFFIX,cmbi.com.hk,DIRECT
+DOMAIN-SUFFIX,bocomgroup.com,DIRECT
+DOMAIN-SUFFIX,dfzq.com.hk,DIRECT
+DOMAIN-SUFFIX,xyzq.com.hk,DIRECT
+DOMAIN-SUFFIX,guosen.com.hk,DIRECT
+DOMAIN-SUFFIX,ztsc.com.hk,DIRECT
+DOMAIN-SUFFIX,rwbkr.com,DIRECT
+DOMAIN-SUFFIX,victorysec.com.hk,DIRECT
 DOMAIN-SUFFIX,monexboom.com,DIRECT
 DOMAIN-SUFFIX,boom.com.hk,DIRECT
 DOMAIN-SUFFIX,fubonsec.com.hk,DIRECT
@@ -306,6 +385,7 @@ DOMAIN-SUFFIX,dbs.com,DIRECT
 DOMAIN-SUFFIX,hkbea.com,DIRECT
 DOMAIN-SUFFIX,dahsing.com,DIRECT
 DOMAIN-SUFFIX,winglungbank.com,DIRECT
+DOMAIN-SUFFIX,cmbwinglungbank.com,DIRECT
 DOMAIN-SUFFIX,bochkhk.com,DIRECT
 DOMAIN-SUFFIX,cncbinternational.com,DIRECT
 DOMAIN-SUFFIX,ccb.com,DIRECT
@@ -315,6 +395,16 @@ DOMAIN-SUFFIX,ocbc.com.hk,DIRECT
 DOMAIN-SUFFIX,aeon.com.hk,DIRECT
 DOMAIN-SUFFIX,jpmorgan.com,DIRECT
 DOMAIN-SUFFIX,jpmorganchase.com,DIRECT
+
+# Major US banks
+DOMAIN-SUFFIX,chase.com,DIRECT
+DOMAIN-SUFFIX,bankofamerica.com,DIRECT
+DOMAIN-SUFFIX,wellsfargo.com,DIRECT
+DOMAIN-SUFFIX,capitalone.com,DIRECT
+DOMAIN-SUFFIX,usbank.com,DIRECT
+DOMAIN-SUFFIX,pnc.com,DIRECT
+DOMAIN-SUFFIX,citi.com,DIRECT
+DOMAIN-SUFFIX,citibank.com,DIRECT
 
 # HK public market data, exchange and regulators
 DOMAIN-SUFFIX,i-invest.com.hk,DIRECT

@@ -1,6 +1,6 @@
 # Quantumult X - HK / US finance routing for Mainland China
-# Policy: finance services default to DIRECT. Only the explicit Mainland-IP
-# restricted broker allowlist below uses PROXY.
+# Policy: finance services default to DIRECT. Only the explicit Mainland-China
+# access exception allowlist below uses PROXY.
 # Replace PROXY with your own proxy policy/group name if needed.
 # Do not add force-policy in [filter_remote]; this file already mixes policies.
 
@@ -58,11 +58,12 @@ HOST,mtprsstreamer.megahubhk.com,DIRECT
 HOST-KEYWORD,megahubhk,DIRECT
 
 # ============================================================
-# PROXY exceptions - services known to require a non-Mainland IP
+# PROXY exceptions - Mainland network/IP access restrictions
 # ============================================================
 
 # Futu / Futubull / moomoo
 HOST-SUFFIX,futu.com,PROXY
+HOST-SUFFIX,futuapi.com,PROXY
 HOST-SUFFIX,futu.cn,PROXY
 HOST-SUFFIX,futu.hk,PROXY
 HOST-SUFFIX,futu.link,PROXY
@@ -70,12 +71,14 @@ HOST-SUFFIX,futuhk.com,PROXY
 HOST-SUFFIX,futuhk1.com,PROXY
 HOST-SUFFIX,futuhk2.com,PROXY
 HOST-SUFFIX,futuhkapp.com,PROXY
+HOST-SUFFIX,futuhongkong.com,PROXY
 HOST-SUFFIX,futuhn.com,PROXY
 HOST-SUFFIX,futunn.com,PROXY
 HOST-SUFFIX,futunn.com.hk,PROXY
 HOST-SUFFIX,futufin.com,PROXY
 HOST-SUFFIX,futuholdings.com,PROXY
 HOST-SUFFIX,futuinc.com,PROXY
+HOST-SUFFIX,futuin.com,PROXY
 HOST-SUFFIX,futuniuniu.com,PROXY
 HOST-SUFFIX,futuoa.com,PROXY
 HOST-SUFFIX,futusg.com,PROXY
@@ -89,6 +92,7 @@ HOST-SUFFIX,futunnimg.com,PROXY
 HOST-SUFFIX,fututrade.com,PROXY
 HOST-SUFFIX,fututrustee.com,PROXY
 HOST-SUFFIX,futuie.com,PROXY
+HOST-SUFFIX,qtlcdn.com,PROXY
 HOST-SUFFIX,futu0.com,PROXY
 HOST-SUFFIX,futu1.com,PROXY
 HOST-SUFFIX,futu2.com,PROXY
@@ -122,9 +126,12 @@ HOST-SUFFIX,itigerup.com,PROXY
 HOST-SUFFIX,itigergrowtha.com,PROXY
 HOST-SUFFIX,tigerbrokers.com,PROXY
 HOST-SUFFIX,tigerbrokers.com.hk,PROXY
+HOST-SUFFIX,tigerbrokers.com.sg,PROXY
+HOST-SUFFIX,tigerbrokers.com.au,PROXY
 HOST-SUFFIX,tigerbrokers.net,PROXY
 HOST-SUFFIX,tigerbrokers.nz,PROXY
 HOST-SUFFIX,tigerfintech.com,PROXY
+HOST-SUFFIX,tigersecurities.com,PROXY
 HOST-SUFFIX,tigerbbs.com,PROXY
 HOST-SUFFIX,tigerbbs.cn,PROXY
 HOST-SUFFIX,laohu8.com,PROXY
@@ -141,6 +148,7 @@ HOST-SUFFIX,longbridge.hk,PROXY
 HOST-SUFFIX,longbridge.sg,PROXY
 HOST-SUFFIX,longbridge.global,PROXY
 HOST-SUFFIX,longbridge.cloud,PROXY
+HOST-SUFFIX,longbridge.app,PROXY
 HOST-SUFFIX,longbridgeapp.com,PROXY
 HOST-SUFFIX,longbridgehk.com,PROXY
 HOST-SUFFIX,longportapp.com,PROXY
@@ -162,52 +170,96 @@ HOST-SUFFIX,webull.hk,PROXY
 HOST-SUFFIX,webull.com.hk,PROXY
 HOST-SUFFIX,wbrks.com,PROXY
 HOST-SUFFIX,webullfintech.com,PROXY
+HOST-SUFFIX,webullapp.com,PROXY
+HOST-SUFFIX,webullbroker.com,PROXY
+HOST-SUFFIX,webulltrade.com,PROXY
 
-# DIRECT - US / international brokers (default)
-HOST-SUFFIX,interactivebrokers.com,DIRECT
-HOST-SUFFIX,interactivebrokers.com.hk,DIRECT
-HOST-SUFFIX,interactivebrokers.co.uk,DIRECT
-HOST-SUFFIX,interactivebrokers.ca,DIRECT
-HOST-SUFFIX,interactivebrokers.co.in,DIRECT
-HOST-SUFFIX,interactivebrokers.co.jp,DIRECT
-HOST-SUFFIX,interactivebrokers.com.au,DIRECT
-HOST-SUFFIX,interactivebrokers.com.sg,DIRECT
-HOST-SUFFIX,interactivebrokers.ie,DIRECT
-HOST-SUFFIX,ibkr.com,DIRECT
-HOST-SUFFIX,ibkr.com.cn,DIRECT
-HOST-SUFFIX,ibkr.com.hk,DIRECT
-HOST-SUFFIX,ibkr.info,DIRECT
-HOST-SUFFIX,ibkrguides.com,DIRECT
-HOST-SUFFIX,ibllc.com,DIRECT
-HOST-SUFFIX,schwab.com,DIRECT
-HOST-SUFFIX,aboutschwab.com,DIRECT
-HOST-SUFFIX,schwab.com.cn,DIRECT
-HOST-SUFFIX,schwab.com.hk,DIRECT
-HOST-SUFFIX,schwab.com.sg,DIRECT
-HOST-SUFFIX,schwab.co.uk,DIRECT
-HOST-SUFFIX,schwabcdn.com,DIRECT
-HOST-SUFFIX,schwabplan.com,DIRECT
-HOST-SUFFIX,schwabassetmanagement.com,DIRECT
-HOST-SUFFIX,tdameritrade.com,DIRECT
-HOST-SUFFIX,thinkorswim.com,DIRECT
-HOST-SUFFIX,firstrade.com,DIRECT
-HOST-SUFFIX,firstrade-chinese.com,DIRECT
+# PROXY - US brokers independently listed by current GFW rule sources
+HOST-SUFFIX,interactivebrokers.com,PROXY
+HOST-SUFFIX,interactivebrokers.com.hk,PROXY
+HOST-SUFFIX,interactivebrokers.co.uk,PROXY
+HOST-SUFFIX,interactivebrokers.ca,PROXY
+HOST-SUFFIX,interactivebrokers.co.in,PROXY
+HOST-SUFFIX,interactivebrokers.co.jp,PROXY
+HOST-SUFFIX,interactivebrokers.com.au,PROXY
+HOST-SUFFIX,interactivebrokers.com.sg,PROXY
+HOST-SUFFIX,interactivebrokers.ie,PROXY
+HOST-SUFFIX,interactiveadvisors.com,PROXY
+HOST-SUFFIX,interactivebrokers-email.com,PROXY
+HOST-SUFFIX,ibkr.com,PROXY
+HOST-SUFFIX,ibkr.com.cn,PROXY
+HOST-SUFFIX,ibkr.com.hk,PROXY
+HOST-SUFFIX,ibkr.info,PROXY
+HOST-SUFFIX,ibkrguides.com,PROXY
+HOST-SUFFIX,ibllc.com,PROXY
+HOST-SUFFIX,schwab.com,PROXY
+HOST-SUFFIX,aboutschwab.com,PROXY
+HOST-SUFFIX,schwab.com.cn,PROXY
+HOST-SUFFIX,schwab.com.hk,PROXY
+HOST-SUFFIX,schwab.com.sg,PROXY
+HOST-SUFFIX,schwab.co.uk,PROXY
+HOST-SUFFIX,schwab.net,PROXY
+HOST-SUFFIX,schwabapi.com,PROXY
+HOST-SUFFIX,schwabcdn.com,PROXY
+HOST-SUFFIX,schwabplan.com,PROXY
+HOST-SUFFIX,schwabassetmanagement.com,PROXY
+HOST-SUFFIX,tdameritrade.com,PROXY
+HOST-SUFFIX,thinkorswim.com,PROXY
+HOST-SUFFIX,tos.mx,PROXY
+HOST-SUFFIX,firstrade.com,PROXY
+HOST-SUFFIX,firstrade.net,PROXY
+HOST-SUFFIX,firstrade.us,PROXY
+HOST-SUFFIX,firstrade-chinese.com,PROXY
+
+# DIRECT - other US / international brokers (default)
 HOST-SUFFIX,robinhood.com,DIRECT
+HOST-SUFFIX,robinhoodcdn.com,DIRECT
+HOST-SUFFIX,robinhoodmarkets.com,DIRECT
 HOST-SUFFIX,fidelity.com,DIRECT
 HOST-SUFFIX,fidelity.com.hk,DIRECT
+HOST-SUFFIX,fidelityinvestments.com,DIRECT
+HOST-SUFFIX,fidelityinternational.com,DIRECT
+HOST-SUFFIX,fidelity.co.uk,DIRECT
+HOST-SUFFIX,fidelity.ca,DIRECT
+HOST-SUFFIX,fidelity.net,DIRECT
+HOST-SUFFIX,fmr.com,DIRECT
+HOST-SUFFIX,401k.com,DIRECT
+HOST-SUFFIX,netbenefits.com,DIRECT
 HOST-SUFFIX,etrade.com,DIRECT
 HOST-SUFFIX,vanguard.com,DIRECT
 HOST-SUFFIX,tastytrade.com,DIRECT
 HOST-SUFFIX,tastyworks.com,DIRECT
+HOST-SUFFIX,tastylive.com,DIRECT
 HOST-SUFFIX,merrilledge.com,DIRECT
 HOST-SUFFIX,ml.com,DIRECT
 HOST-SUFFIX,morganstanley.com,DIRECT
+HOST-SUFFIX,morganstanleyclientserv.com,DIRECT
+HOST-SUFFIX,stockplanconnect.com,DIRECT
 HOST-SUFFIX,sofi.com,DIRECT
 HOST-SUFFIX,sofi.hk,DIRECT
 HOST-SUFFIX,sofi.com.hk,DIRECT
 HOST-SUFFIX,bbae.com,DIRECT
 HOST-SUFFIX,bbae.com.hk,DIRECT
 HOST-SUFFIX,bbae.net,DIRECT
+HOST-SUFFIX,tradestation.com,DIRECT
+HOST-SUFFIX,tradestation.io,DIRECT
+HOST-SUFFIX,tradestationapi.com,DIRECT
+HOST-SUFFIX,alpaca.markets,DIRECT
+HOST-SUFFIX,alpacaapi.com,DIRECT
+HOST-SUFFIX,home.saxo,DIRECT
+HOST-SUFFIX,saxo.com,DIRECT
+HOST-SUFFIX,saxobank.com,DIRECT
+HOST-SUFFIX,saxotrader.com,DIRECT
+HOST-SUFFIX,etoro.com,DIRECT
+HOST-SUFFIX,etorostatic.com,DIRECT
+HOST-SUFFIX,ig.com,DIRECT
+HOST-SUFFIX,iggroup.com,DIRECT
+HOST-SUFFIX,igmarkets.com,DIRECT
+HOST-SUFFIX,trading212.com,DIRECT
+HOST-SUFFIX,trading212.io,DIRECT
+HOST-SUFFIX,plus500.com,DIRECT
+HOST-SUFFIX,public.com,DIRECT
+HOST-SUFFIX,publicinvest.com,DIRECT
 
 # DIRECT - HK broker / wealth apps (default)
 HOST-SUFFIX,fotechwealth.com,DIRECT
@@ -221,9 +273,14 @@ HOST-SUFFIX,poems.com.hk,DIRECT
 HOST-SUFFIX,phillipfunds.com.hk,DIRECT
 HOST-SUFFIX,cyberquote.com.hk,DIRECT
 HOST-SUFFIX,valuable.com.hk,DIRECT
+HOST-SUFFIX,vbkr.com,DIRECT
+HOST-SUFFIX,hstong.com,DIRECT
+HOST-SUFFIX,huashengtong.com,DIRECT
 HOST-SUFFIX,vcgroup.com.hk,DIRECT
 HOST-SUFFIX,usmart.hk,DIRECT
 HOST-SUFFIX,usmartsecurities.com,DIRECT
+HOST-SUFFIX,usmartglobal.com,DIRECT
+HOST-SUFFIX,usmartsg.com,DIRECT
 HOST-SUFFIX,eddid.com.hk,DIRECT
 HOST-SUFFIX,eddid.cn,DIRECT
 HOST-SUFFIX,eddidyzt.com,DIRECT
@@ -233,7 +290,29 @@ HOST-SUFFIX,mystockhk.com,DIRECT
 HOST-SUFFIX,htisec.com,DIRECT
 HOST-SUFFIX,htisec.net,DIRECT
 HOST-SUFFIX,gtjai.com,DIRECT
+HOST-SUFFIX,gtja.com.hk,DIRECT
+HOST-SUFFIX,gtht.com,DIRECT
 HOST-SUFFIX,bocichina.com,DIRECT
+HOST-SUFFIX,bocionline.com,DIRECT
+HOST-SUFFIX,citics.com.hk,DIRECT
+HOST-SUFFIX,swhyhk.com,DIRECT
+HOST-SUFFIX,cmschina.com.hk,DIRECT
+HOST-SUFFIX,gfgroup.com.hk,DIRECT
+HOST-SUFFIX,chinastock.com.hk,DIRECT
+HOST-SUFFIX,htsc.com.hk,DIRECT
+HOST-SUFFIX,htsc.com.cn,DIRECT
+HOST-SUFFIX,ebshk.com,DIRECT
+HOST-SUFFIX,cinda.com.hk,DIRECT
+HOST-SUFFIX,cicc.com,DIRECT
+HOST-SUFFIX,cicc.com.cn,DIRECT
+HOST-SUFFIX,cmbi.com.hk,DIRECT
+HOST-SUFFIX,bocomgroup.com,DIRECT
+HOST-SUFFIX,dfzq.com.hk,DIRECT
+HOST-SUFFIX,xyzq.com.hk,DIRECT
+HOST-SUFFIX,guosen.com.hk,DIRECT
+HOST-SUFFIX,ztsc.com.hk,DIRECT
+HOST-SUFFIX,rwbkr.com,DIRECT
+HOST-SUFFIX,victorysec.com.hk,DIRECT
 HOST-SUFFIX,monexboom.com,DIRECT
 HOST-SUFFIX,boom.com.hk,DIRECT
 HOST-SUFFIX,fubonsec.com.hk,DIRECT
@@ -305,6 +384,7 @@ HOST-SUFFIX,dbs.com,DIRECT
 HOST-SUFFIX,hkbea.com,DIRECT
 HOST-SUFFIX,dahsing.com,DIRECT
 HOST-SUFFIX,winglungbank.com,DIRECT
+HOST-SUFFIX,cmbwinglungbank.com,DIRECT
 HOST-SUFFIX,bochkhk.com,DIRECT
 HOST-SUFFIX,cncbinternational.com,DIRECT
 HOST-SUFFIX,ccb.com,DIRECT
@@ -314,6 +394,16 @@ HOST-SUFFIX,ocbc.com.hk,DIRECT
 HOST-SUFFIX,aeon.com.hk,DIRECT
 HOST-SUFFIX,jpmorgan.com,DIRECT
 HOST-SUFFIX,jpmorganchase.com,DIRECT
+
+# Major US banks
+HOST-SUFFIX,chase.com,DIRECT
+HOST-SUFFIX,bankofamerica.com,DIRECT
+HOST-SUFFIX,wellsfargo.com,DIRECT
+HOST-SUFFIX,capitalone.com,DIRECT
+HOST-SUFFIX,usbank.com,DIRECT
+HOST-SUFFIX,pnc.com,DIRECT
+HOST-SUFFIX,citi.com,DIRECT
+HOST-SUFFIX,citibank.com,DIRECT
 
 # HK public market data, exchange and regulators
 HOST-SUFFIX,i-invest.com.hk,DIRECT
