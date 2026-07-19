@@ -8,7 +8,7 @@
 
 - 香港和美国银行、支付、交易所、监管、行情服务默认 `DIRECT`。
 - 香港券商与未发现中国大陆网络阻断证据的美国 / 国际券商默认 `DIRECT`。
-- 富途、老虎、长桥、Webull、Schwab、Firstrade 使用 `PROXY`；IBKR 仅国际主域 `interactivebrokers.com` 使用 `PROXY`，区域站和交易网关直连。
+- 富途、老虎、长桥和 Webull 的核心/App 域使用 `PROXY`，未被双来源收录的区域门户直连；Schwab 与 Firstrade 仅被双来源精确收录的主门户使用 `PROXY`；IBKR 仅国际主域 `interactivebrokers.com` 使用 `PROXY`。
 - `PROXY` 只使用品牌主域和明确后端域名；不加入共享统计、共享云域、大段 IP-CIDR 或宽泛代理关键词。
 
 IBKR、Schwab、Firstrade 并非因为“美国券商”这一身份而代理，而是特定主域同时出现在当前 `gfwlist` 和 Blackmatrix7 Proxy 域列表中。策略按精确证据边界应用，不扩展到同品牌但未被收录的区域站或交易网关。
@@ -46,13 +46,13 @@ IBKR、Schwab、Firstrade 并非因为“美国券商”这一身份而代理，
 
 | 软件 / 服务 | 证据 | 结论 |
 | --- | --- | --- |
-| 富途 / Futubull / moomoo | A、G、R | `futunn.com` 等主域被 gfwlist 与 Blackmatrix7 同时精确收录；多个券商专项库补充交易、静态及备用域。加入品牌专用 `futuapi.com`、`futuhongkong.com`、`futuin.com`、`qtlcdn.com`，拒绝共享 Appsflyer、腾讯云 IM 和云 IP 段。 |
-| 老虎证券 / Tiger / TradeUp | A、G、R | `itiger.com` 被两类 GFW 来源共同收录。补入官网区域域 `tigerbrokers.com.sg`、`tigerbrokers.com.au` 和品牌域 `tigersecurities.com`。 |
-| 长桥 / Longbridge / Longport | A、G、R | `longbridge.com` / `longbridge.global` 被两类 GFW 来源共同收录。补入近期券商库中的 `longbridge.app`。 |
+| 富途 / Futubull / moomoo | A、G、R | `futunn.com`、`futu.com`、`futu.cn`、大量交易/静态/备用域被 gfwlist 与 Blackmatrix7 同时精确收录，继续 `PROXY`。未被两个来源共同收录的区域门户 `futu.hk`、`futuhongkong.com`、`futunn.com.hk`、`futusg.com`、`moomoo.com.hk`、`moomoo.com.au`、`moomoo.sg`、`moomoo.ca` 改为 `DIRECT`。品牌 API/资源域仍随 App 代理。 |
+| 老虎证券 / Tiger / TradeUp | A、G、R | `itiger.com`、`tigerbrokers.com`、`tigerfintech.com` 等核心域被双来源收录，继续 `PROXY`。未被双来源共同收录的香港、新加坡和澳洲门户 `tigerbrokers.com.hk`、`.com.sg`、`.com.au` 改为 `DIRECT`；App/API 品牌域继续代理。 |
+| 长桥 / Longbridge / Longport | A、G、R | `longbridge.com`、`.global`、`.hk`、`.sg` 及交易/行情域被双来源收录，继续 `PROXY`。`longbridge.cn` 未被两个来源共同收录，按默认原则改为 `DIRECT`；`longportapp.cn` 和 OpenAPI 中国域仍有代理来源证据，继续代理。 |
 | Webull | A、R | 当前 GFW 双来源未精确收录 `webull.com`，但多个券商专项库及品牌资源共同显示其 App 使用独立境外后端；沿用用户场景中的代理例外，并补入 `webullapp.com`、`webullbroker.com`、`webulltrade.com`。证据强度低于 G 级服务。 |
 | IBKR / Interactive Brokers | A、G、R | 只有国际主域 `interactivebrokers.com` 被 gfwlist 与 Blackmatrix7 同时精确收录，因此该域及子域走 `PROXY`。`ibkr.com`、`ibkr.com.cn`、香港和其他区域门户未被这两个来源精确收录，保持 `DIRECT`。TWS / IB Gateway 的 `ibllc.com`、中国网关 `ibllc.com.cn`（包括 `mcgw1`）以及香港亚洲网关 `hdc1` 均保持 `DIRECT`。 |
-| Charles Schwab / TD Ameritrade / thinkorswim | A、G、R | `schwab.com` 同时被 gfwlist 与 Blackmatrix7 精确收录，改为 `PROXY`；补齐 `schwab.net`、`schwabapi.com`、`tos.mx`。 |
-| Firstrade | A、G、R | `firstrade.com` 同时被 gfwlist 与 Blackmatrix7 精确收录，改为 `PROXY`；补入 `firstrade.net`、`firstrade.us`。 |
+| Charles Schwab / TD Ameritrade / thinkorswim | A、G、R | 双来源共同精确收录 `schwab.com`、`schwab.com.cn`、`schwab.com.hk`、`schwab.co.uk`，仅这四个门户使用 `PROXY`。`aboutschwab.com`、`schwab.com.sg`、API/CDN/Plan/Asset Management、TD Ameritrade、thinkorswim 和 `tos.mx` 未达到双来源门槛，恢复 `DIRECT`。 |
+| Firstrade | A、G、R | 双来源共同精确收录的只有 `firstrade.com`，因此仅主域使用 `PROXY`；`firstrade.net`、`firstrade.us`、`firstrade-chinese.com` 恢复 `DIRECT`。 |
 
 ## 默认 `DIRECT` 券商审计
 

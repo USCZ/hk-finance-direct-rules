@@ -24,7 +24,20 @@ EXPECTED_POLICIES = {
   ["DOMAIN-SUFFIX", "ibkr.com"] => "DIRECT",
   ["DOMAIN-SUFFIX", "ibkr.com.cn"] => "DIRECT",
   ["DOMAIN-SUFFIX", "ibllc.com"] => "DIRECT",
-  ["DOMAIN-SUFFIX", "ibllc.com.cn"] => "DIRECT"
+  ["DOMAIN-SUFFIX", "ibllc.com.cn"] => "DIRECT",
+  ["DOMAIN-SUFFIX", "futu.com"] => "PROXY",
+  ["DOMAIN-SUFFIX", "futu.hk"] => "DIRECT",
+  ["DOMAIN-SUFFIX", "moomoo.com"] => "PROXY",
+  ["DOMAIN-SUFFIX", "moomoo.com.hk"] => "DIRECT",
+  ["DOMAIN-SUFFIX", "tigerbrokers.com"] => "PROXY",
+  ["DOMAIN-SUFFIX", "tigerbrokers.com.hk"] => "DIRECT",
+  ["DOMAIN-SUFFIX", "longbridge.com"] => "PROXY",
+  ["DOMAIN-SUFFIX", "longbridge.cn"] => "DIRECT",
+  ["DOMAIN-SUFFIX", "schwab.com"] => "PROXY",
+  ["DOMAIN-SUFFIX", "schwab.com.sg"] => "DIRECT",
+  ["DOMAIN-SUFFIX", "tdameritrade.com"] => "DIRECT",
+  ["DOMAIN-SUFFIX", "firstrade.com"] => "PROXY",
+  ["DOMAIN-SUFFIX", "firstrade.net"] => "DIRECT"
 }.freeze
 
 def parse_rules(path, prefix)
