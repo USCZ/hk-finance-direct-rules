@@ -176,22 +176,28 @@ HOST-SUFFIX,webulltrade.com,PROXY
 
 # PROXY - US brokers independently listed by current GFW rule sources
 HOST-SUFFIX,interactivebrokers.com,PROXY
-HOST-SUFFIX,interactivebrokers.com.hk,PROXY
-HOST-SUFFIX,interactivebrokers.co.uk,PROXY
-HOST-SUFFIX,interactivebrokers.ca,PROXY
-HOST-SUFFIX,interactivebrokers.co.in,PROXY
-HOST-SUFFIX,interactivebrokers.co.jp,PROXY
-HOST-SUFFIX,interactivebrokers.com.au,PROXY
-HOST-SUFFIX,interactivebrokers.com.sg,PROXY
-HOST-SUFFIX,interactivebrokers.ie,PROXY
-HOST-SUFFIX,interactiveadvisors.com,PROXY
-HOST-SUFFIX,interactivebrokers-email.com,PROXY
-HOST-SUFFIX,ibkr.com,PROXY
-HOST-SUFFIX,ibkr.com.cn,PROXY
-HOST-SUFFIX,ibkr.com.hk,PROXY
-HOST-SUFFIX,ibkr.info,PROXY
-HOST-SUFFIX,ibkrguides.com,PROXY
-HOST-SUFFIX,ibllc.com,PROXY
+
+# DIRECT - IBKR regional portals and TWS / IB Gateway infrastructure
+# Current GFW sources list interactivebrokers.com, but not these domains.
+HOST-SUFFIX,interactivebrokers.com.hk,DIRECT
+HOST-SUFFIX,interactivebrokers.co.uk,DIRECT
+HOST-SUFFIX,interactivebrokers.ca,DIRECT
+HOST-SUFFIX,interactivebrokers.co.in,DIRECT
+HOST-SUFFIX,interactivebrokers.co.jp,DIRECT
+HOST-SUFFIX,interactivebrokers.com.au,DIRECT
+HOST-SUFFIX,interactivebrokers.com.sg,DIRECT
+HOST-SUFFIX,interactivebrokers.ie,DIRECT
+HOST-SUFFIX,interactiveadvisors.com,DIRECT
+HOST-SUFFIX,interactivebrokers-email.com,DIRECT
+HOST-SUFFIX,ibkr.com,DIRECT
+HOST-SUFFIX,ibkr.com.cn,DIRECT
+HOST-SUFFIX,ibkr.com.hk,DIRECT
+HOST-SUFFIX,ibkr.info,DIRECT
+HOST-SUFFIX,ibkrguides.com,DIRECT
+HOST-SUFFIX,ibllc.com,DIRECT
+HOST-SUFFIX,ibllc.com.cn,DIRECT
+
+# Schwab / TD Ameritrade / thinkorswim
 HOST-SUFFIX,schwab.com,PROXY
 HOST-SUFFIX,aboutschwab.com,PROXY
 HOST-SUFFIX,schwab.com.cn,PROXY
