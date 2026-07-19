@@ -58,6 +58,30 @@ HOST,mtprsstreamer.megahubhk.com,DIRECT
 HOST-KEYWORD,megahubhk,DIRECT
 
 # ============================================================
+# DIRECT - regional portals in otherwise proxy-routed families
+# These exact regional domains are not present in both current
+# GFW sources. Trading/API backends remain in the PROXY blocks.
+# ============================================================
+
+# Futu / moomoo regional portals
+HOST-SUFFIX,futu.hk,DIRECT
+HOST-SUFFIX,futuhongkong.com,DIRECT
+HOST-SUFFIX,futunn.com.hk,DIRECT
+HOST-SUFFIX,futusg.com,DIRECT
+HOST-SUFFIX,moomoo.com.hk,DIRECT
+HOST-SUFFIX,moomoo.com.au,DIRECT
+HOST-SUFFIX,moomoo.sg,DIRECT
+HOST-SUFFIX,moomoo.ca,DIRECT
+
+# Tiger regional portals
+HOST-SUFFIX,tigerbrokers.com.hk,DIRECT
+HOST-SUFFIX,tigerbrokers.com.sg,DIRECT
+HOST-SUFFIX,tigerbrokers.com.au,DIRECT
+
+# Longbridge Mainland portal
+HOST-SUFFIX,longbridge.cn,DIRECT
+
+# ============================================================
 # PROXY exceptions - Mainland network/IP access restrictions
 # ============================================================
 
@@ -65,23 +89,19 @@ HOST-KEYWORD,megahubhk,DIRECT
 HOST-SUFFIX,futu.com,PROXY
 HOST-SUFFIX,futuapi.com,PROXY
 HOST-SUFFIX,futu.cn,PROXY
-HOST-SUFFIX,futu.hk,PROXY
 HOST-SUFFIX,futu.link,PROXY
 HOST-SUFFIX,futuhk.com,PROXY
 HOST-SUFFIX,futuhk1.com,PROXY
 HOST-SUFFIX,futuhk2.com,PROXY
 HOST-SUFFIX,futuhkapp.com,PROXY
-HOST-SUFFIX,futuhongkong.com,PROXY
 HOST-SUFFIX,futuhn.com,PROXY
 HOST-SUFFIX,futunn.com,PROXY
-HOST-SUFFIX,futunn.com.hk,PROXY
 HOST-SUFFIX,futufin.com,PROXY
 HOST-SUFFIX,futuholdings.com,PROXY
 HOST-SUFFIX,futuinc.com,PROXY
 HOST-SUFFIX,futuin.com,PROXY
 HOST-SUFFIX,futuniuniu.com,PROXY
 HOST-SUFFIX,futuoa.com,PROXY
-HOST-SUFFIX,futusg.com,PROXY
 HOST-SUFFIX,futubull.cn,PROXY
 HOST-SUFFIX,futubull.com,PROXY
 HOST-SUFFIX,futuesop.com,PROXY
@@ -104,10 +124,6 @@ HOST-SUFFIX,futu7.com,PROXY
 HOST-SUFFIX,futu8.com,PROXY
 HOST-SUFFIX,futu9.com,PROXY
 HOST-SUFFIX,moomoo.com,PROXY
-HOST-SUFFIX,moomoo.com.hk,PROXY
-HOST-SUFFIX,moomoo.com.au,PROXY
-HOST-SUFFIX,moomoo.sg,PROXY
-HOST-SUFFIX,moomoo.ca,PROXY
 HOST-SUFFIX,moomooequity.com,PROXY
 HOST-SUFFIX,moomoobull.com,PROXY
 HOST-SUFFIX,moomootrustee.com,PROXY
@@ -125,9 +141,6 @@ HOST-SUFFIX,itiger.com,PROXY
 HOST-SUFFIX,itigerup.com,PROXY
 HOST-SUFFIX,itigergrowtha.com,PROXY
 HOST-SUFFIX,tigerbrokers.com,PROXY
-HOST-SUFFIX,tigerbrokers.com.hk,PROXY
-HOST-SUFFIX,tigerbrokers.com.sg,PROXY
-HOST-SUFFIX,tigerbrokers.com.au,PROXY
 HOST-SUFFIX,tigerbrokers.net,PROXY
 HOST-SUFFIX,tigerbrokers.nz,PROXY
 HOST-SUFFIX,tigerfintech.com,PROXY
@@ -143,7 +156,6 @@ HOST-SUFFIX,tigertrade.app,PROXY
 
 # Longbridge / Longport
 HOST-SUFFIX,longbridge.com,PROXY
-HOST-SUFFIX,longbridge.cn,PROXY
 HOST-SUFFIX,longbridge.hk,PROXY
 HOST-SUFFIX,longbridge.sg,PROXY
 HOST-SUFFIX,longbridge.global,PROXY
@@ -197,25 +209,31 @@ HOST-SUFFIX,ibkrguides.com,DIRECT
 HOST-SUFFIX,ibllc.com,DIRECT
 HOST-SUFFIX,ibllc.com.cn,DIRECT
 
-# Schwab / TD Ameritrade / thinkorswim
+# Schwab main portals independently listed by current GFW sources
 HOST-SUFFIX,schwab.com,PROXY
-HOST-SUFFIX,aboutschwab.com,PROXY
 HOST-SUFFIX,schwab.com.cn,PROXY
 HOST-SUFFIX,schwab.com.hk,PROXY
-HOST-SUFFIX,schwab.com.sg,PROXY
 HOST-SUFFIX,schwab.co.uk,PROXY
-HOST-SUFFIX,schwab.net,PROXY
-HOST-SUFFIX,schwabapi.com,PROXY
-HOST-SUFFIX,schwabcdn.com,PROXY
-HOST-SUFFIX,schwabplan.com,PROXY
-HOST-SUFFIX,schwabassetmanagement.com,PROXY
-HOST-SUFFIX,tdameritrade.com,PROXY
-HOST-SUFFIX,thinkorswim.com,PROXY
-HOST-SUFFIX,tos.mx,PROXY
+
+# DIRECT - Schwab auxiliary, regional, and legacy services
+HOST-SUFFIX,aboutschwab.com,DIRECT
+HOST-SUFFIX,schwab.com.sg,DIRECT
+HOST-SUFFIX,schwab.net,DIRECT
+HOST-SUFFIX,schwabapi.com,DIRECT
+HOST-SUFFIX,schwabcdn.com,DIRECT
+HOST-SUFFIX,schwabplan.com,DIRECT
+HOST-SUFFIX,schwabassetmanagement.com,DIRECT
+HOST-SUFFIX,tdameritrade.com,DIRECT
+HOST-SUFFIX,thinkorswim.com,DIRECT
+HOST-SUFFIX,tos.mx,DIRECT
+
+# Firstrade main portal
 HOST-SUFFIX,firstrade.com,PROXY
-HOST-SUFFIX,firstrade.net,PROXY
-HOST-SUFFIX,firstrade.us,PROXY
-HOST-SUFFIX,firstrade-chinese.com,PROXY
+
+# DIRECT - Firstrade auxiliary and regional domains
+HOST-SUFFIX,firstrade.net,DIRECT
+HOST-SUFFIX,firstrade.us,DIRECT
+HOST-SUFFIX,firstrade-chinese.com,DIRECT
 
 # DIRECT - other US / international brokers (default)
 HOST-SUFFIX,robinhood.com,DIRECT
