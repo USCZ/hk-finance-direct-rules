@@ -9,7 +9,7 @@
 **默认 `DIRECT`，仅把明确需要非中国大陆 IP 的服务设为 `PROXY`。**
 
 - 香港银行、虚拟银行、支付、交易所、监管机构和公开行情：`DIRECT`
-- 美国 / 国际券商：默认 `DIRECT`
+- 美国 / 国际券商：默认 `DIRECT`，但被当前 GFW 规则双来源明确收录的服务除外
 - 香港券商和财富平台：默认 `DIRECT`
 - 已知会对中国大陆 IP 限制访问的跨境互联网券商：`PROXY`
 
@@ -21,8 +21,11 @@
 | 跨境互联网券商 | 老虎证券 / Tiger Brokers / TradeUp |
 | 跨境互联网券商 | 长桥 / Longbridge / Longport |
 | 跨境互联网券商 | Webull |
+| 中国大陆网络层受限的美国券商 | IBKR / Interactive Brokers |
+| 中国大陆网络层受限的美国券商 | Charles Schwab / TD Ameritrade / thinkorswim |
+| 中国大陆网络层受限的美国券商 | Firstrade |
 
-除上述例外外，规则中收录的 IBKR、Schwab、Firstrade、Fidelity、E*Trade、Robinhood、耀才、辉立、华盛、uSmart、艾德、第一上海、海通国际、国泰君安国际、中银国际、FSMOne 等券商均为 `DIRECT`。如果以后确认某个服务必须使用香港或美国 IP，应补充精确域名并单独加入 `PROXY` 例外，而不是把整类海外金融机构全部代理。
+IBKR、Schwab 和 Firstrade 同时出现在 2026-07-18 的 `gfwlist` 与 Blackmatrix7 Proxy 域名中，因此属于可复现的中国大陆网络层代理例外。Fidelity、E*Trade、Robinhood、TradeStation、Alpaca、Saxo、eToro、Trading 212、Plus500、耀才、辉立、华盛、uSmart、艾德、第一上海、海通国际、国泰海通、中银国际、FSMOne 等仍为 `DIRECT`。如果以后确认某个服务必须使用香港或美国 IP，应补充精确域名并单独加入 `PROXY` 例外，而不是把整类海外金融机构全部代理。
 
 ## 文件
 
@@ -75,6 +78,16 @@ https://raw.githubusercontent.com/USCZ/hk-finance-direct-rules/main/loon-hk-fina
 3. 代理规则只使用品牌主域或明确后端域名，不使用 `DOMAIN-KEYWORD` 宽泛匹配，也不加入共享云服务域名和大段 IP-CIDR。
 4. 如果 App 异常，先查看客户端日志中的实际域名，再补充最小范围规则。
 5. 本规则应放在其他 Global、Proxy 或 Broker 大规则之前，以免精确的金融直连规则被提前覆盖。
+
+## 校验
+
+仓库提供可重复执行的静态校验：
+
+```bash
+ruby tools/verify_rules.rb
+```
+
+它会检查三份客户端规则是否一致、语法是否合法、是否存在重复或冲突，以及被明确拒绝的共享/错误域名是否重新混入。
 
 ## 免责声明
 
