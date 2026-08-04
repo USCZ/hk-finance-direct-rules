@@ -41,6 +41,12 @@ HOST,toptrader1.chiefgroup.com.hk,DIRECT
 HOST,toptrader2.chiefgroup.com.hk,DIRECT
 HOST,toptrader3.chiefgroup.com.hk,DIRECT
 HOST,toptrader4.chiefgroup.com.hk,DIRECT
+# Explicit cm-chiefgroup.com / zft2025.com API subdomains
+# (HOST-SUFFIX can miss these in some clients; add explicit HOST rules)
+HOST,api.cm-chiefgroup.com,DIRECT
+HOST,api1.cm-chiefgroup.com,DIRECT
+HOST,api2.cm-chiefgroup.com,DIRECT
+HOST,quote.zft2025.com,DIRECT
 HOST-SUFFIX,chief-website.oss-cn-hongkong.aliyuncs.com,DIRECT
 HOST-SUFFIX,chiefgroup.udeskglobal.com,DIRECT
 HOST-KEYWORD,chiefgroup,DIRECT
