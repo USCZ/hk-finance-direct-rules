@@ -57,6 +57,22 @@ DOMAIN,common-h5.toptrader1979.com,DIRECT
 DOMAIN,common-h5.chieftrader1979.com,DIRECT
 DOMAIN,service.zft2025.com,DIRECT
 DOMAIN,service.chieftrader1979.com,DIRECT
+# Explicit cdn / chief-deposit subdomains across all Chief brand domains
+# (cdn and chief-deposit are common prefixes; add explicit DOMAIN for all)
+DOMAIN,cdn.chiefgroup.com,DIRECT
+DOMAIN,cdn.cm-chiefgroup.com,DIRECT
+DOMAIN,cdn.zft2000.com,DIRECT
+DOMAIN,cdn.zft2025.com,DIRECT
+DOMAIN,cdn.chieftrader1979.com,DIRECT
+DOMAIN,cdn.toptrader1979.com,DIRECT
+DOMAIN,cdn.cg1979.com,DIRECT
+DOMAIN,chief-deposit.chiefgroup.com,DIRECT
+DOMAIN,chief-deposit.cm-chiefgroup.com,DIRECT
+DOMAIN,chief-deposit.zft2000.com,DIRECT
+DOMAIN,chief-deposit.zft2025.com,DIRECT
+DOMAIN,chief-deposit.chieftrader1979.com,DIRECT
+DOMAIN,chief-deposit.toptrader1979.com,DIRECT
+DOMAIN,chief-deposit.cg1979.com,DIRECT
 DOMAIN-SUFFIX,chief-website.oss-cn-hongkong.aliyuncs.com,DIRECT
 DOMAIN-SUFFIX,chiefgroup.udeskglobal.com,DIRECT
 DOMAIN-KEYWORD,chiefgroup,DIRECT
