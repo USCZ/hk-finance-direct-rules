@@ -47,12 +47,27 @@ HOST,api.cm-chiefgroup.com,DIRECT
 HOST,api1.cm-chiefgroup.com,DIRECT
 HOST,api2.cm-chiefgroup.com,DIRECT
 HOST,quote.zft2025.com,DIRECT
+# Explicit common-h5 / service subdomains across all Chief brand domains
+# (prefix varies; explicit HOST + KEYWORD catch-all below)
+HOST,common-h5.chiefgroup.com,DIRECT
+HOST,common-h5.zft2000.com,DIRECT
+HOST,common-h5.cg1979.com,DIRECT
+HOST,common-h5.toptrader1979.com,DIRECT
+HOST,common-h5.chieftrader1979.com,DIRECT
+HOST,service.zft2025.com,DIRECT
+HOST,service.chieftrader1979.com,DIRECT
 HOST-SUFFIX,chief-website.oss-cn-hongkong.aliyuncs.com,DIRECT
 HOST-SUFFIX,chiefgroup.udeskglobal.com,DIRECT
 HOST-KEYWORD,chiefgroup,DIRECT
 HOST-KEYWORD,chieftrade,DIRECT
 HOST-KEYWORD,chiefsecurities,DIRECT
 HOST-KEYWORD,chief-sec,DIRECT
+# Catch-all KEYWORD rules for Chief brand domains with varying subdomain prefixes
+HOST-KEYWORD,zft2000,DIRECT
+HOST-KEYWORD,zft2025,DIRECT
+HOST-KEYWORD,cg1979,DIRECT
+HOST-KEYWORD,toptrader1979,DIRECT
+HOST-KEYWORD,chieftrader1979,DIRECT
 
 # Megahub quote/streaming services used by Chief apps
 HOST-SUFFIX,megahubhk.com,DIRECT
