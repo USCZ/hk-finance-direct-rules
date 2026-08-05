@@ -129,6 +129,9 @@ HOST-KEYWORD,megahubhk,DIRECT
 # Push / analytics services used by Chief apps (Engagelab / JPush)
 HOST-SUFFIX,engagelab.com,DIRECT
 HOST-KEYWORD,engagelab,DIRECT
+# Volcengine (火山引擎) UBA analytics used by Chief apps
+HOST-SUFFIX,uba.ap-southeast-1.volces.com,DIRECT
+HOST,gator.uba.ap-southeast-1.volces.com,DIRECT
 
 # ============================================================
 # DIRECT - regional portals in otherwise proxy-routed families
