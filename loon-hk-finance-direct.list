@@ -79,6 +79,10 @@ DOMAIN,mtstreamer.megahubhk.com,DIRECT
 DOMAIN,mtprsstreamer.megahubhk.com,DIRECT
 DOMAIN-KEYWORD,megahubhk,DIRECT
 
+# Push / analytics services used by Chief apps (Engagelab / JPush)
+DOMAIN-SUFFIX,engagelab.com,DIRECT
+DOMAIN-KEYWORD,engagelab,DIRECT
+
 # ============================================================
 # DIRECT - regional portals in otherwise proxy-routed families
 # These exact regional domains are not present in both current
