@@ -25,6 +25,9 @@ DOMAIN-SUFFIX,zft2025.com,DIRECT
 DOMAIN-SUFFIX,chieftrader1979.com,DIRECT
 DOMAIN-SUFFIX,toptrader1979.com,DIRECT
 DOMAIN-SUFFIX,cg1979.com,DIRECT
+DOMAIN-SUFFIX,chiefquote.com,DIRECT
+DOMAIN-SUFFIX,chiefquote.com.hk,DIRECT
+DOMAIN-SUFFIX,chief-quote.com,DIRECT
 DOMAIN,api.chiefgroup.com.hk,DIRECT
 DOMAIN,api2.chiefgroup.com.hk,DIRECT
 DOMAIN,ca.chiefgroup.com.hk,DIRECT
@@ -520,3 +523,16 @@ DOMAIN-KEYWORD,i-invest,DIRECT
 DOMAIN-KEYWORD,aastocks,DIRECT
 DOMAIN-KEYWORD,etnet,DIRECT
 DOMAIN-KEYWORD,hkex,DIRECT
+
+# China market data sources used by HK brokers (A-share quotes, indices)
+DOMAIN-SUFFIX,sseinfo.com,DIRECT
+DOMAIN-SUFFIX,sse.com.cn,DIRECT
+DOMAIN-SUFFIX,szse.cn,DIRECT
+DOMAIN-SUFFIX,szse.com,DIRECT
+DOMAIN-SUFFIX,eastmoney.com,DIRECT
+DOMAIN-SUFFIX,quote.eastmoney.com,DIRECT
+DOMAIN-SUFFIX,dfcfw.com,DIRECT
+DOMAIN-SUFFIX,emquant.com,DIRECT
+DOMAIN-SUFFIX,10jqka.com.cn,DIRECT
+DOMAIN-SUFFIX,hexin.cn,DIRECT
+DOMAIN-SUFFIX,hexin.com,DIRECT
